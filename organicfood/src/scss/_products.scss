@@ -1,10 +1,6 @@
 .of-products {
 	width: 100%;
 	background: transparent;
-	font-size: 30px;
-	font-family: $raleway;
-	text-transform: uppercase;
-	color: white;
 
 	.wrapper {
 		width: 100%;
@@ -18,11 +14,6 @@
 		width: 100%;
 		max-width: 380px;
 		height: 680px;
-		display: flex;
-		justify-content: flex-start;
-		align-items: flex-end;
-		padding: 30px;
-		background: url("../img/img1.jpg") no-repeat;
 		background-size: cover;
 	}
 
@@ -43,25 +34,15 @@
 			width: 100%;
 
 			&__left {
-				width: 60%;
-				padding: 30px;
-				background: url("../img/img2.jpg") no-repeat;
+				width: 60%;			
 				background-size: cover;
-				display: flex;
-				justify-content: flex-start;
-				align-items: flex-end;
 				height: 100%;
 
 			}
 
 			&__right {
 				width: 40%;
-				padding: 30px;
-				background: url("../img/img3.jpg") no-repeat;
 				background-size: cover;
-				display: flex;
-				justify-content: flex-start;
-				align-items: flex-end;
 				height: 100%;
 			}
 		}
@@ -75,23 +56,11 @@
 
 
 			&__left {
-				width: 40%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				background: transparent;
-				height: 100%;
-				color: $yellow;
 			}
 
 			&__right {
 				width: 60%;
-				padding: 30px;
-				background: url("../img/img4.jpg") no-repeat;
 				background-size: cover;
-				display: flex;
-				justify-content: flex-start;
-				align-items: flex-end;
 				height: 100%;
 			}
 		}
@@ -102,4 +71,153 @@
 	display: block;
 	width: 100%;
 	font-weight: 900;
+}
+
+.product-item {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	padding: 30px;
+	font-size: 30px;
+	font-family: $raleway;
+	text-transform: uppercase;
+	color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: rgba($main, .6);
+	background-blend-mode: multiply;
+	transition: all .3s ease;
+
+	&:hover {
+		background-color: rgba($main, .9);
+	}
+}
+
+.bottom-side__left {
+	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: transparent;
+	height: 100%;
+	color: $yellow;
+	font-size: 40px;
+	position: relative;
+	overflow: hidden;
+
+	&:hover {
+		color: transparent;
+		animation-duration: 5s;
+		animation-name: backText;
+
+		&::before {
+			animation-duration: 3s;
+			animation-name: awesomeTrigger;
+		}
+	}
+
+	&::before {
+		position: absolute;
+		content: "AWESOME";
+		color: transparent;
+		font-size: 40px;
+		font-weight: 900;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@keyframes awesomeTrigger {
+	0% {
+		color: transparent;
+	}
+
+	37.49999999% {
+		color: transparent;
+	}
+
+	37.5% {
+		color: $yellow;
+		font-size: 40px;
+		top: auto;
+		left: auto;
+	}	
+
+	49.9999999% {
+		color: $yellow;
+		font-size: 40px;
+		top: auto;
+		left: auto;
+	}
+
+	50% {
+		font-size: 150px;
+		color: $yellow;
+		transform: translate(250px, -80px);
+		top: auto;
+		left: auto;
+	}	
+
+	62.9999999% {
+		font-size: 150px;
+		color: $yellow;
+		transform: translate(250px, -80px);
+		top: auto;
+		left: auto;
+	}
+
+	63.0% {
+		font-size: 150px;
+		transform: translate(-250px, 80px);
+		color: $yellow;
+		top: auto;
+		left: auto;
+	}	
+
+	74.99999999% {
+		font-size: 150px;
+		transform: translate(-250px, 80px);
+		color: $yellow;
+		top: auto;
+		left: auto;
+	}
+
+	75% {
+		font-size: 60px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: $yellow;
+	}
+
+	80% {
+		font-size: 43px;
+		color: $yellow;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	100% {
+		font-size: 40px;
+		color: $yellow;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@keyframes backText {
+	from {
+		color: transparent;
+	}
+
+	80% {
+		color: transparent;
+	}
+
+	to {
+		color: $yellow;
+	}
 }
