@@ -1,0 +1,30 @@
+
+//open sans
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+//raleway
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;900&display=swap');
+
+//storytella 
+
+@font-face {
+	font-family: "storytella";
+	src: url("../assets/fonts/Storytella.woff") format("woff");
+}
+
+$sans: 'Open Sans', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$storytella: 'storytella';
+
+//colors 
+
+$yellow: #fcdb5a;
+$pink: #e5248a;
+$green: #73b63c;
+$orange: #f7ab32;
+$blue: #4bbdd5;
+$main: #2e2e2e;
+$tastyCakesColor: #d8bb90;
+$grey: #4f4f4f;
+$white: #ffffff;
+$black: #000000;
