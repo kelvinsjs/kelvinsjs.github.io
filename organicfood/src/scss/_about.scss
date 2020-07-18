@@ -1,0 +1,64 @@
+.of-about {
+	padding: 0;
+	transform: translateY(-110px);
+
+	.container {
+		padding: 0;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	&__item {
+		width: 100%;
+		max-width: 300px;
+		height: 220px;
+		padding: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		color: $main;
+		background-size: cover;
+		background-color: #fff;
+		overflow: hidden;
+
+		&-title {
+			font-size: 18px;
+			font-family: $raleway;
+			font-weight: 700;
+			margin-bottom: 25px;
+			text-transform: capitalize;
+			text-align: left;
+			width: 100%;
+			text-align: left;
+		}
+
+		&-description {
+			font-size: 14px;
+			font-family: $sans;
+			color: $grey;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.aboutimgwr {
+	padding: 0;
+	@include padding-hack(220px);
+	overflow: hidden;
+	&:hover {
+		& > img {
+			transform: scale(1.1);
+		}
+	}
+
+	& > img {
+		transition: all .3s ease;
+	}
+}

@@ -5,7 +5,8 @@ let clickCounter = 0;
 headerButton.addEventListener('click', (event) => {
 	event.preventDefault();
 	clickCounter++;
-	alert("Количество нажатий на эту кнопку: " + clickCounter);
+	alert("Количество нажатий на кнопки: " + clickCounter);
+	localStorage.setItem("counter", clickCounter);
 })
 
 headerButton.addEventListener('focus', (e) => {
@@ -29,3 +30,70 @@ for (let i = 0; i < productCards.length; i++) {
 }
 
 //awesome анимация 
+
+$(".bottom-side__left").mouseenter(function(event) {
+	$(this).addClass("back-text");
+	setTimeout(function(){
+		$(".bottom-side__left").removeClass("back-text");
+	}, 5999);
+})
+
+$(".bottom-side__left").mouseleave(function(event) {
+	$(this).removeClass("back-text");
+})
+
+//случайный цвет для текста в слогане
+const sloganText = "Quality food is the most important thing in our life";
+const sloganArray = sloganText.split( "\n" ).join( " " ).split( " " );
+const colorArray = ["pink", "green", "orange", "blue", "yellow"];
+let randomColorArray = [];
+for (let i = 0; i<sloganArray.length; i++) {
+	randomColorArray[i] = colorArray[Math.floor(Math.random() * Math.floor(5))];
+}
+
+let finalText = "";
+
+for (let k = 0; k<sloganArray.length; k++) {
+	finalText = finalText + '<span class="' + randomColorArray[k] + '">' + sloganArray[k] + ' </span>';
+}
+
+$(".of-slogan__text-text").append(finalText);
+
+//для кнопки в perfect 
+
+$(".of-perfect__button").click(function(e) {
+	e.preventDefault();
+	clickCounter++;
+	alert("Количество нажатий на кнопки: " + clickCounter);
+	localStorage.setItem("counter", clickCounter);
+})
+
+//localStorage save
+
+document.addEventListener("DOMContentLoaded", () => {
+	clickCounter = localStorage.getItem("counter");
+})
+
+//добавление картики в about 
+
+const aboutBlocks = document.querySelectorAll(".of-about__item");
+console.log(aboutBlocks);
+let aboutArray = [];
+for (let i = 0; i < aboutBlocks.length; i++) {
+	if (aboutBlocks[i].innerHTML == "") {
+		aboutArray.push(aboutBlocks[i]);
+	} else {
+	}
+}
+
+let numberForAbout;
+
+for (let i = 0; i < aboutArray.length; i++) {
+	numberForAbout = i+1;
+	// aboutArray[i].style.backgroundImage = "url('./img/p" + numberForAbout + ".jpg')";
+	var aboutimg = document.createElement("img");
+	aboutimg.src = './img/p' + numberForAbout + '.jpg';
+	aboutimg.alt = "party4everybody";
+	aboutArray[i].appendChild(aboutimg);
+	aboutArray[i].classList.add("aboutimgwr");
+}

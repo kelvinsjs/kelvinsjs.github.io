@@ -106,9 +106,6 @@
 	overflow: hidden;
 
 	&:hover {
-		color: transparent;
-		animation-duration: 5s;
-		animation-name: backText;
 
 		&::before {
 			animation-duration: 3s;
@@ -220,4 +217,10 @@
 	to {
 		color: $yellow;
 	}
+}
+
+.back-text {
+	color: transparent;
+	animation-duration: 5s;
+	animation-name: backText;
 }
