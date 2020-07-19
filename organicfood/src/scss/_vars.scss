@@ -13,9 +13,15 @@
 	src: url("../assets/fonts/Storytella.woff") format("woff");
 }
 
+@font-face {
+	font-family: "gilroy";
+	src: url("../assets/fonts/Gilroy-Bold.woff") format("woff");
+}
+
 $sans: 'Open Sans', sans-serif;
 $raleway: 'Raleway', sans-serif;
 $storytella: 'storytella';
+$gilroy: "gilroy";
 
 //colors 
 
@@ -29,3 +35,5 @@ $tastyCakesColor: #d8bb90;
 $grey: #4f4f4f;
 $white: #ffffff;
 $black: #000000;
+
+//Gilroy-Bold.woff

@@ -82,7 +82,6 @@ let aboutArray = [];
 for (let i = 0; i < aboutBlocks.length; i++) {
 	if (aboutBlocks[i].innerHTML == "") {
 		aboutArray.push(aboutBlocks[i]);
-	} else {
 	}
 }
 
@@ -96,4 +95,36 @@ for (let i = 0; i < aboutArray.length; i++) {
 	aboutimg.alt = "party4everybody";
 	aboutArray[i].appendChild(aboutimg);
 	aboutArray[i].classList.add("aboutimgwr");
+}
+
+//gallery img width 
+
+const imageWidth = (document.documentElement.clientWidth) / 4;
+console.log(imageWidth);
+const photoArray = document.querySelectorAll(".of-gallery__item");
+photoArray.forEach((element) => {
+	element.style.maxWidth = imageWidth + "px";
+	element.style.paddingTop = imageWidth + "px";
+})
+
+//gallery name position
+
+const nameArray = document.querySelectorAll(".of-gallery__name");
+const widthArray = [];
+nameArray.forEach((element) => {
+	widthArray.push(element.offsetWidth);
+});
+
+for (let i = 0; i < nameArray.length; i++) {
+	nameArray[i].style.transform = 'translate(' + (imageWidth*0.5 - widthArray[i]*0.5) +'px, -' + (imageWidth*0.5 - 9) + 'px)';
+}
+
+
+//blog bg photos 
+
+const blogItems = document.querySelectorAll(".of-blog__item");
+let numforblog;
+for (let i = 0; i<blogItems.length; i++) {
+	numforblog = i+1;
+	blogItems[i].style.backgroundImage = 'url("../img/b' + numforblog + '.jpg")';
 }
