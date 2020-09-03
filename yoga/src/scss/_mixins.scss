@@ -1,0 +1,7 @@
+@mixin headerTextStyle ($fz, $fw) {
+	font-family: $fira;
+	font-size: $fz;
+	color: $white;
+	text-transform: uppercase;
+	font-weight: $fw;
+}

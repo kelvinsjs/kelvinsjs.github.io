@@ -1,0 +1,41 @@
+.yo-about {
+	padding: 30px 0;
+
+	&__title {
+		text-transform: uppercase;
+		color: $main;
+		font-family: $fira;
+		font-size: 60px;
+		display: block;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	&__description {
+		font-size: 20px;
+		color: $submain;
+		text-align: center;
+		font-family: $mw;
+		font-weight: 400;
+		margin-bottom: 20px;
+	}
+
+	&__list {
+		width: 100%;
+		text-align: left;
+		margin: 0 auto;
+		max-width: 800px;
+
+		&-item {
+			font-size: 18px;
+			font-family: $mw;
+			font-weight: 400;
+			font-style: italic;
+		}
+	}
+}
+
+.sun {
+	margin-right: 5px;
+	width: 15px;
+}

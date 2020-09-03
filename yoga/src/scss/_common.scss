@@ -1,0 +1,88 @@
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	$base-size: 16px;
+	font-size: $base-size;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+ul {list-style: none;
+	li {
+		a {
+			display: flex;
+		}
+	}
+}
+
+a:link,     /* unvisited link */
+a:visited,  /* visited link */
+a:hover,  /* mouse over link */
+a:active {
+	text-decoration: none;
+}
+/* selected link */
+
+.phone {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transform: translate(-30px, -30px);
+	width: 300px;
+	height: 90px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	transition: all .3s ease;
+
+	&:hover {
+		transform: translate(-30px, -40px);
+		cursor: pointer;
+	}
+
+	&-logo {
+		height: 90px;
+		border-radius: 50%;
+		position: relative;
+		z-index: 50;
+	}
+
+	&-number {
+		position:relative;
+		width: 200px;
+		z-index: 44;
+		transform: translateX(-10px);
+		font-size: 25px;
+		color: $blue;
+		background: $white;
+		height: 60px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		border-top-right-radius: 30px;
+		border-bottom-right-radius: 30px;
+		padding: 0px 10px;
+		font-family: $fira;
+		box-shadow: 2px 2px 16px 0 rgba(black, .6);
+	}
+
+	&-text {
+		font-size: 15px;
+		margin-bottom: 5px;
+	}
+}
