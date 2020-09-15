@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<style>
+		body {
+			display: flex; 
+			justify-content: center;
+			flex-direction: column;
+			background-color: #232323;
+		}
+	</style>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>App 4 all that i need</title>
+	<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<a class="back" href="index.html">
+		&#8592; Назад
+	</a>
+	<div class="currency">
+		<form class="currency-form">
+			<label for="uah" class="currency-label">
+				Гривны
+			</label>
+			<input type="number" class="currency-input uah" name="uah" value="1">
+		</form>
+	</div>
+	<div class="currency">
+		<form class="currency-form">
+			<label for="dollar" class="currency-label">
+				Доллары
+			</label>
+			<input type="number" class="currency-input dollar" name="dollar">
+		</form>
+	</div>
+	<div class="currency">
+		<form class="currency-form">
+			<label for="euro" class="currency-label">
+				Евро
+			</label>
+			<input type="number" class="currency-input euro" name="euro">
+		</form>
+	</div>
+	<div class="currency">
+		<form class="currency-form">
+			<label for="rub" class="currency-label">
+				Рубли
+			</label>
+			<input type="number" class="currency-input rub" name="rub">
+		</form>
+	</div>
+	<script>
+		const getUahInput = document.querySelector(".uah");
+		const getDollarInput = document.querySelector(".dollar");
+		const getEuroInput = document.querySelector(".euro");
+		const getRubInput = document.querySelector(".rub");
+		getUahInput.addEventListener('input', calcUah);	
+		getUahInput.addEventListener('change', calcUah);
+		getDollarInput.addEventListener('input', calcDollar);	
+		getDollarInput.addEventListener('change', calcDollar);
+		getEuroInput.addEventListener('input', calcEuro);	
+		getEuroInput.addEventListener('change', calcEuro);
+		getRubInput.addEventListener('input', calcRub);	
+		getRubInput.addEventListener('change', calcRub);
+		function calcUah() {
+			fetch('https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11')
+			.then((response) => {
+				return response.json();
+			})
+			.then((data) => {
+				getDollarInput.value = (getUahInput.value / data[0].buy).toFixed(2);
+				getEuroInput.value = (getUahInput.value / data[1].buy).toFixed(2);
+				getRubInput.value = (getUahInput.value / data[2].buy).toFixed(2);
+			});	
+		}
+		function calcDollar() {
+			fetch('https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11')
+			.then((response) => {
+				return response.json();
+			})
+			.then((data) => {
+				getUahInput.value = (getDollarInput.value * data[0].buy).toFixed(2);
+				getEuroInput.value = (getUahInput.value / data[1].buy).toFixed(2);
+				getRubInput.value = (getUahInput.value / data[2].buy).toFixed(2);
+			});	
+		}
+		function calcEuro() {
+			fetch('https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11')
+			.then((response) => {
+				return response.json();
+			})
+			.then((data) => {
+				getUahInput.value = (getEuroInput.value * data[1].buy).toFixed(2);
+				getDollarInput.value = (getUahInput.value / data[0].buy).toFixed(2);
+				getRubInput.value = (getUahInput.value / data[2].buy).toFixed(2);
+			});	
+		}
+		function calcRub() {
+			fetch('https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11')
+			.then((response) => {
+				return response.json();
+			})
+			.then((data) => {
+				getUahInput.value = (getRubInput.value * data[2].buy).toFixed(2);
+				getDollarInput.value = (getUahInput.value / data[0].buy).toFixed(2);
+				getEuroInput.value = (getUahInput.value / data[1].buy).toFixed(2);
+			});	
+		}
+		calcUah();
+	</script>
+</body>
+<script src="app.js"></script>
+</html>
+

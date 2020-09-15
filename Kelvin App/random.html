@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: flex-start;
+			padding-top: 80px;
+			flex-direction: column;
+			background-color: #232323;
+			color: white;
+			font-family: 'Montserrat Alternates', sans-serif;
+		}
+	</style>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Random number</title>
+	<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="my-alert">
+		<p class="alert-text">
+			Привет. Это создатель программы. Ты уверен, что тебе нужно столько чисел? Естественно, программа выведет столько чисел, сколько ты попросил, но учти, что программа после вывода может работать некорректно (а еще долго). Если ты все еще хочешь получить столько чисел - нажми на кнопку ниже и повтори попытку
+		</p>
+		<div class="alert-button agree">
+			Хорошо
+		</div>
+	</div>
+	<a class="back" href="index.html">
+		&#8592; Назад
+	</a>
+	<div class="range">
+		<p class="range-text" id='text'>Выберите диапазон случайных чисел</p>
+		<div class="range-inputs" id="rangeinp">
+			<label class="range-label">
+				<span class="label-text">Min:</span>
+				<input type="number" class="min-range label-input" min="0" value="1">
+			</label>
+			<label class="range-label">
+				<span class="label-text">Max:</span>
+				<input type="number" class="max-range label-input" min="0" value="100">
+			</label>
+		</div>
+	</div>
+	<div class="count">
+		<p class="count-text">Количество случайных чисел (click)</p>
+		<input type="number" class="count-input" value = "1">
+	</div>
+	<button class="submitButton">Сгенерировать</button>
+	<p class="finalNum">
+		50
+	</p>
+</body>
+<script src="app.js">
+</script>
+<script>
+	// ширина поля
+	const getWidth = document.getElementById("text").offsetWidth;
+	document.getElementById("rangeinp").style.width = getWidth + "px";
+</script>
+<script>
+	// появление исчезновение поля для ввода количества
+	const stateText = document.querySelector(".count-text");
+	const stateCount = document.querySelector(".count-input");
+	const getMargin = document.querySelector(".count");
+	stateText.addEventListener('click', () => {
+		stateCount.classList.toggle('displayblock');
+		getMargin.style.marginBottom = getMargin.style.marginBottom === '60px' ? '90px' : '60px';
+	})
+</script>
+<script>
+	const submitButton = document.querySelector(".submitButton");
+	function mainRandom() {
+		const minRange   =  document.querySelector(".min-range").value;
+		const maxRange   =  document.querySelector(".max-range").value;
+		const thisCount  =  document.querySelector(".count-input").value;
+		const finalNum   =  document.querySelector(".finalNum");
+		let numberForFinalNum = [];
+		for (let i = 0; i < thisCount; i++) {
+			min = Math.ceil(minRange);
+			max = Math.floor(maxRange);
+			numberForFinalNum.push(Math.floor(Math.random() * ((max+1) - (min)) + (min)));
+		}
+		finalNum.innerText = "";
+		for (let i = 0; i < numberForFinalNum.length; i++) {
+			finalNum.innerText = finalNum.innerText + " " + numberForFinalNum[i];
+		}	
+		if (thisCount == 1) {
+			finalNum.style.fontSize = "90px";
+		} else if (thisCount == 2) {
+			finalNum.style.fontSize = "65px";
+		} else if (thisCount > 2) {
+			finalNum.style.fontSize = "18px";
+		}
+	}
+
+	let k = 0;
+	
+	submitButton.addEventListener('click', () => {
+		const thisCount  =  document.querySelector(".count-input").value;
+		if (thisCount < 300) {
+			mainRandom();
+		} else {
+			if (k == 0) {
+				document.querySelector(".my-alert").style.display = "block";
+				k = 2;
+			} else {
+				mainRandom();
+			}
+		}
+	})
+
+	document.querySelector(".alert-button").addEventListener('click', () => {
+		document.querySelector(".my-alert").style.display = "none";
+	})
+	//код самого рандомайзера
+	//1. процесс самого рандомайзера
+	//2. шрифт при определенном количестве
+	//3. ограничение на количество
+
+	
+</script>
+
+</html>
