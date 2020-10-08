@@ -20,17 +20,11 @@ Date.prototype.getWeek = function() {
 } 
 var myDate = new Date();
 var weekNumber = myDate.getWeek();
-let typeOfWeek;
-if (weekNumber%2 == 0) {
-	typeOfWeek = "odd";
-} else {
-	typeOfWeek = "even";
-}
-const colorPack = "8cdafe 8cdafe bef2cc fdda9a fedb9b abfdf1 00ad99 fff0ab fea7b0"
-const colors = colorPack.split( "\n" ).join( " " ).split( " " );
+let typeOfWeek;typeOfWeek=weekNumber%2==0?"odd":"even";
+const colors = "8cdafe 8cdafe bef2cc fdda9a fedb9b abfdf1 00ad99 fff0ab fea7b0".split( "\n" ).join( " " ).split( " " );
 let completeColors = [];
 function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
+	return Math.floor(Math.random() * Math.floor(max));
 }
 for (let p = 0; p < 20; p++) {
 	completeColors.push(colors[getRandomInt(colors.length)])
