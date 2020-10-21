@@ -32,7 +32,7 @@ for (let p = 0; p < 20; p++) {
 
 const getWeekDays = document.querySelectorAll(".weekday-name");	
 const weekdayLessons = $(".weekday-lessons");
-fetch('https://raw.githubusercontent.com/kelvinsjs/lessons-database/master/db.json')
+fetch('https://raw.githubusercontent.com/kelvinsjs/lessons-database/main/db.json')
 .then((response) => {
 	return response.json();
 })
