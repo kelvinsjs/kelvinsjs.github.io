@@ -1,7 +1,7 @@
 const mainBox = $("#main");
 mainBox.append(`
 	<h1 class="title">
-	Розклад занять 1-го курсу ІГ ГІС 
+	Розклад занять 1-го курсу ІГ ГІС
 	</h1>
 	`);
 for (let i = 0; i<5; i++) {
@@ -17,7 +17,7 @@ for (let i = 0; i<5; i++) {
 Date.prototype.getWeek = function() {
 	var onejan = new Date(this.getFullYear(),0,1);
 	return Math.ceil((((this - onejan) / 86400000) + onejan.getDay()+1)/7);
-} 
+}
 var myDate = new Date();
 var weekNumber = myDate.getWeek();
 let typeOfWeek;typeOfWeek=weekNumber%2==0?"odd":"even";
@@ -30,7 +30,7 @@ for (let p = 0; p < 20; p++) {
 	completeColors.push(colors[getRandomInt(colors.length)])
 }
 
-const getWeekDays = document.querySelectorAll(".weekday-name");	
+const getWeekDays = document.querySelectorAll(".weekday-name");
 const weekdayLessons = $(".weekday-lessons");
 fetch('https://raw.githubusercontent.com/kelvinsjs/lessons-database/main/db.json')
 .then((response) => {
@@ -41,7 +41,7 @@ fetch('https://raw.githubusercontent.com/kelvinsjs/lessons-database/main/db.json
 		for (let j = 0; j<data[i].lessons.length; j++) {
 			if (data[i].lessons[j].aval == "always" || data[i].lessons[j].aval == typeOfWeek) {
 				$(weekdayLessons[i]).append(
-					`			
+					`
 					<div class="weekday-lesson">
 					<p class="left-side">
 					<span class="lesson-start">`+
