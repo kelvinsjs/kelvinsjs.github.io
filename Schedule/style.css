@@ -187,14 +187,16 @@ body {
   }
 }
 
-;
 
 .newyearblock {
   font-family: 'Pacifico', cursive;
   font-size: 100px;
   color: white;
   width: 100%;
+  padding: 20px 0;
   text-align: center;
-  background-image: url("./assets/images/nwyr.jpg");
-  background-position: bottom;
+  background: url("nwyr.jpg") no-repeat;
+  /* background-position: bottom; */
+  text-shadow: black 0 0 4px;
+  margin-bottom: 40px;
 }
