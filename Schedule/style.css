@@ -181,7 +181,20 @@ body {
   from {
     transform: translate(-50%, -70%);
   }
+
   to {
     transform: translate(-50%, -50%);
   }
+}
+
+;
+
+.newyearblock {
+  font-family: 'Pacifico', cursive;
+  font-size: 100px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  background-image: url("./assets/images/nwyr.jpg");
+  background-position: bottom;
 }
