@@ -200,3 +200,9 @@ body {
   text-shadow: black 0 0 4px;
   margin-bottom: 40px;
 }
+
+@media screen and (max-width: 1300px) {
+.newyearblock {
+      font-size: 7vw;
+  }
+}
