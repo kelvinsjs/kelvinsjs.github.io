@@ -44,7 +44,7 @@ fetch('https://raw.githubusercontent.com/kelvinsjs/lessons-database/main/db.json
         $(weekdayLessons[i]).append(
           `
 					<div class="weekday-lesson">
-					Сьогодні пар немає. Гарного дня!
+					У цей день пар немає. Гарного настрою!
 					</div>`
         )
       } else {
