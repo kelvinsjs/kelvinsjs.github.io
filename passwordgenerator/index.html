@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Password Generator by Kelvin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="pr-header">
+    <h1 class="pr-title">
+      Password Generator
+    </h1>
+    <h3 style="pr-subtitle">
+      Generate a secure password
+    </h3>
+  </header>
+  <main>
+    <div class="password-field">
+      <p class="password-there">
+        <span class="password-result">
+          Your password will be there
+        </span>
+        <span class="password-watch">
+          <img src="eye.png" alt="eye" class="img-icon">
+        </span>
+      </p>
+      <div class="password-buttons">
+        <button class="copy-button control-button">
+          Copy
+        </button>
+        <button class="generate-button control-button">
+          Generate
+        </button>
+      </div>
+    </div>
+    <div class="password-settings">
+      <form class="settings-form">
+        <ul class="settings-list">
+          <li class="settings-item"><label class="settings-label">
+              <input type="checkbox" checked class="settings-checkbox">
+              <p class="settings-text">Uppercase</p>
+            </label></li>
+          <li class="settings-item"><label class="settings-label">
+              <input type="checkbox" checked class="settings-checkbox">
+              <p class="settings-text">Lowercase</p>
+            </label></li>
+          <li class="settings-item"><label class="settings-label">
+              <input type="checkbox" checked class="settings-checkbox">
+              <p class="settings-text">Numbers</p>
+            </label></li>
+          <li class="settings-item"><label class="settings-label">
+              <input type="checkbox" class="settings-checkbox">
+              <p class="settings-text">Special Symbols</p>
+            </label></li>
+          <li class="settings-item"><label class="settings-label" title="without I or L or l or i">
+              <input type="checkbox" class="settings-checkbox">
+              <p class="settings-text">Easy To Read</p>
+            </label></li>
+          <li class="settings-item"><label class="settings-label">
+              <input type="checkbox" class="settings-checkbox">
+              <p class="settings-text">Generate Password immediately</p>
+            </label></li>
+          <li class="settings-item"><label class="settings-label">
+              <input type="checkbox" class="settings-checkbox">
+              <p class="settings-text">Keep password hidden</p>
+            </label></li>
+          <li class="settings-item"><label class="settings-label">
+              <input type="number" class="settings-number" value="12">
+              <p class="settings-text">Count of symbols</p>
+            </label></li>
+        </ul>
+      </form>
+    </div>
+  </main>
+  <script src="./app.js" charset="utf-8"></script>
+</body>
+
+</html>

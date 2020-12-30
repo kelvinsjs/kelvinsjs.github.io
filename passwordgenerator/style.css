@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e3f6f5;
+  font-size: 16px;
+  width: 100%;
+  font-family: 'Barlow', sans-serif;
+}
+
+.pr-header {
+  width: 100%;
+  padding: 15px 0;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.pr-title {
+  font-size: 60px;
+  font-weight: 700;
+  color: #272343;
+  margin-bottom: 10px;
+}
+
+.pr-subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: #2d334a;
+}
+
+main {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.password-field {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 2px;
+  width: 100%;
+  max-width: 800px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.password-there {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  border: 1px solid #272343;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+}
+
+.password-result {
+  font-size: 35px;
+  color: #272343;
+  font-weight: 500;
+}
+
+.password-buttons {
+  width: 95%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: flex-end;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.control-button {
+  width: 120px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  border: none;
+  border-radius: 1px;
+  background-color: #ffd803;
+  color: #272343;
+  height: 35px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.control-button:first-child {
+  margin-right: 5px;
+}
+
+.password-watch {
+  width: 40px;
+  height: 40px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.img-icon {
+  width: 35px;
+}
+
+.password-settings {
+  display: block;
+  background-color: #fff;
+  border-radius: 2px;
+  width: 100%;
+  max-width: 800px;
+  padding: 10px 10px;
+}
+
+.settings-list {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  list-style: none;
+}
+
+.settings-item {
+  width: 100%;
+  max-width: 380px;
+  height: 40px;
+  background: #eff0f3;
+  color: #272343;
+  font-size: 18px;
+  border-radius: 1px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.settings-label {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: flex-start;
+  -ms-align-items: center;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.settings-checkbox {
+  margin-right: 5px;
+}
+
+.settings-number {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  margin-right: 5px;
+}
