@@ -11,12 +11,7 @@
 
 <body>
   <header class="pr-header">
-    <h1 class="pr-title">
-      Password Generator
-    </h1>
-    <h3 style="pr-subtitle">
-      Generate a secure password
-    </h3>
+<h1 class="pr-title">Password Generator</h1><h3 style="pr-subtitle">Generate a secure password</h3>
   </header>
   <main>
     <div class="password-field">
@@ -41,7 +36,7 @@
       <form class="settings-form">
         <ul class="settings-list">
           <li class="settings-item"><label class="settings-label">
-              <input type="checkbox" checked class="settings-checkbox">
+              <input type="checkbox" checked="true" class="settings-checkbox">
               <p class="settings-text">Uppercase</p>
             </label></li>
           <li class="settings-item"><label class="settings-label">
@@ -69,12 +64,13 @@
               <p class="settings-text">Keep password hidden</p>
             </label></li>
           <li class="settings-item"><label class="settings-label">
-              <input type="number" class="settings-number" value="12">
+              <input type="number" class="settings-number" value="12" min="1">
               <p class="settings-text">Count of symbols</p>
             </label></li>
         </ul>
       </form>
     </div>
+    <p class="control-span" id="control-span">Your Password didn`t be generate</p>
   </main>
   <script src="./app.js" charset="utf-8"></script>
 </body>
