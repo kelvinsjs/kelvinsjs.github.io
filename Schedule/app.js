@@ -21,7 +21,7 @@ Date.prototype.getWeek = function() {
 var myDate = new Date();
 var weekNumber = myDate.getWeek();
 let typeOfWeek;
-typeOfWeek = weekNumber % 2 == 0 ? "odd" : "even";
+typeOfWeek = weekNumber % 2 == 0 ? "even" : "odd";
 const colors = "8cdafe 8cdafe bef2cc fdda9a fedb9b abfdf1 00ad99 fff0ab fea7b0".split("\n").join(" ").split(" ");
 let completeColors = [];
 
