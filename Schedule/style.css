@@ -145,6 +145,11 @@ body {
   width: 100%;
   max-width: 300px;
 }
+.session > span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .close {
   width: 30px;
@@ -185,4 +190,9 @@ body {
   to {
     transform: translate(-50%, -50%);
   }
+}
+
+.session-bold {
+  text-align: right;
+  width: 50px;
 }
