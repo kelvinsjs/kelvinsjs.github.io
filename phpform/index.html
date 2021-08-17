@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Форма обратной связи</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: block;
+            width: 100%;
+            background: blue;
+            color: white;
+            padding: 20px 0;
+        }
+        h1  {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-family: "Arial";
+            font-weight: bold;
+            font-size: 40px;
+        }
+        main {
+            width: 95%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 16px 5px grey;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Привет! Заполни данные о себе :3</h1>
+</header>
+<main>
+    <form action="telegram.php" class="form" method="POST">
+        <label for="name" class="form-label">Имя:</label>
+        <input type="text" name="name" class="form-input" placeholder="Name:">
+        <label for="surname" class="form-label">Фамилия:</label>
+        <input type="text" name="surname" class="form-input">
+        <label for="phone" class="form-label">Номер телефона:</label>
+        <input type="text" name="phone" class="form-input">
+        <button type="submit">
+            Отправить!
+        </button>
+    </form>
+</main>
+</body>
+</html>
