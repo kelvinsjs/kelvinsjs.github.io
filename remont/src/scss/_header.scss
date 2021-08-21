@@ -1,0 +1,118 @@
+.re-header {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/bgheader.jpg") no-repeat 0 0;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-color: #222222;
+
+  &__contacts {
+    height: 70px;
+    width: 100%;
+    background-color: #222222;
+    color: #f0f0f0;
+
+    .container {
+      display: flex;
+      justify-content: flex-end;
+      height: 100%;
+      align-items: center;
+    }
+  }
+
+  &__phoneLink {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 20px;
+    font-family: $mont;
+    font-weight: 700;
+    margin-right: 20px;
+
+    .fa-phone-alt {
+      color: #ffb606;
+    }
+  }
+
+  &__callButton {
+    height: 100%;
+    background-color: #ffb606;
+    padding: 0 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: #222222;
+    outline: none;
+    border: none;
+    font-family: $mont;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 30px;
+    text-decoration: none;
+    font-family: $tinos;
+    color: #222222;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    padding-bottom: 40px;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    & > span {
+      display: block;
+
+      &:last-child {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  &__link {
+    color: #f0f0f0;
+    position: relative;
+    font-size: 20px;
+    font-family: $mont;
+    font-weight: 400;
+    transition: all .3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: #ffb606;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+
+      &:after {
+        transform-origin: bottom left;
+        transform: scaleX(1);
+      }
+    }
+  }
+}

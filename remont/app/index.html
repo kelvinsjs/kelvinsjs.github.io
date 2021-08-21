@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Ремонтні роботи</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/libs/glide.core.min.css">
+    <link rel="stylesheet" href="./assets/libs/glide.theme.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="assets/libs/slick.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="re-header">
+    <div class="re-header__contacts">
+        <div class="container">
+            <a href="tel:0674617703" class="re-header__phoneLink">
+                <i class="fas fa-phone-alt"></i>&nbsp; + 38 (067) 461 77 03
+            </a>
+            <button class="re-header__callButton">
+                Замовити дзвінок
+            </button>
+        </div>
+    </div>
+    <div class="container">
+        <nav class="re-header__nav">
+            <a href="./index.html" class="re-header__logo">
+                <span>
+                    Гільдія
+                </span>
+                <span>
+                    Майстрів
+                </span>
+            </a>
+            <ul class="re-header__list">
+                <li class="re-header__list-item"><a href="#" class="re-header__link">
+                    Послуги
+                </a></li>
+                <li class="re-header__list-item"><a href="#" class="re-header__link">
+                    Ціни
+                </a></li>
+                <li class="re-header__list-item"><a href="#" class="re-header__link">
+                    Наші роботи
+                </a></li>
+                <li class="re-header__list-item"><a href="#" class="re-header__link">
+                    Відгуки
+                </a></li>
+                <li class="re-header__list-item"><a href="#" class="re-header__link">
+                    Контакти
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="re-main">
+    <section class="re-test">
+        <div class="container">
+            <h2 class="re-title">
+                Замовте послуги майстра-штукатура вже зараз
+            </h2>
+            <form class="re-test__form">
+                <h3 class="re-test__form-title">
+                    Оберіть тип ремонтних робіт, які вам необхідні:
+                </h3>
+                <div class="re-test__form-choose">
+                    <label class="re-test__form-labelChoose">
+                        <input type="radio" class="re-test__form-radio" name="type-radio" value="Штукатурка">
+                        <span class="re-test__labelSpan">Штукатурка</span>
+                    </label>
+                    <label class="re-test__form-labelChoose">
+                        <input type="radio" class="re-test__form-radio" name="type-radio" value="Шпаклівка">
+                        <span class="re-test__labelSpan">Шпаклівка</span>
+                    </label>
+                    <label class="re-test__form-labelChoose">
+                        <input type="radio" class="re-test__form-radio" name="type-radio" value="Комплексні роботи">
+                        <span class="re-test__labelSpan">Комплексні роботи</span>
+                    </label>
+                    <label class="re-test__form-labelChoose">
+                        <input type="radio" class="re-test__form-radio" name="type-radio"
+                               value="Потрібна консультація з майстром">
+                        <span class="re-test__labelSpan">Потрібна консультація з майстром</span>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+<footer>
+
+</footer>
+<script src="js/bundle.js"></script>
+<script async src="https://kit.fontawesome.com/c55362b8b5.js" crossorigin="anonymous"></script>
+<script>
+    new Glide('.glide', {
+        type: 'carousel',
+        startAt: 0,
+        autoplay: 400000,
+        hoverpause: false,
+        perView: 3,
+        breakpoints: {
+            800: {
+                perView: 1
+            }
+        }
+
+    }).mount()
+</script>
+</body>
+</html>
