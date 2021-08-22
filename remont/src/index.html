@@ -95,6 +95,35 @@
     </div>
 </header>
 <main class="re-main">
+    <section class="re-modal so-invisible">
+        <div class="container">
+            <form class="re-modal__form">
+                <div class="re-modal__finalScreen">
+                    <h3 class="re-modal__title">
+                        Вкажіть ваші контактні дані:
+                    </h3>
+                    <label class="re-modal__label">
+                        <p class="re-modal__label-text">
+                            Ваше ім'я:
+                        </p>
+                        <input type="text" class="re-modal__input" id="nameInput" name="inputField">
+                    </label>
+                    <label class="re-modal__label">
+                        <p class="re-modal__label-text">
+                            Ваш телефон:
+                        </p>
+                        <input type="phone" id="phoneInput" class="re-modal__input" name="inputField">
+                    </label>
+                    <button type="submit" class="re-modal__button">
+                        <i class="fas fa-paper-plane"></i> Відправити
+                    </button>
+                </div>
+                <p class="close-form">
+                    Закрити форму
+                </p>
+            </form>
+        </div>
+    </section>
     <section class="re-test">
         <div class="container">
             <h2 class="re-title">
@@ -132,20 +161,10 @@
 </footer>
 <script src="js/bundle.js"></script>
 <script async src="https://kit.fontawesome.com/c55362b8b5.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/2.2.0/jquery.inputmask.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/2.2.0/min/jquery.inputmask.js"></script>
 <script>
-    new Glide('.glide', {
-        type: 'carousel',
-        startAt: 0,
-        autoplay: 400000,
-        hoverpause: false,
-        perView: 3,
-        breakpoints: {
-            800: {
-                perView: 1
-            }
-        }
-
-    }).mount()
+    $("#phoneInput").inputmask({"mask": "+38 (999) 999 99 99"});
 </script>
 </body>
 </html>
