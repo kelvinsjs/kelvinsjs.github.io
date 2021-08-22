@@ -28,3 +28,10 @@ const form = document.querySelector(".re-test__form");
 form.addEventListener("submit", (e) => {
 
 })
+
+const hambButton = document.querySelector(".re-header__hamb");
+hambButton.addEventListener("click", (e) => {
+    e.preventDefault();
+document.querySelector(".re-header__list").classList.toggle("invisible");
+document.querySelector(".fa-bars").classList.toggle("fa-times");
+})
