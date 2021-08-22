@@ -6,6 +6,7 @@
   background-size: cover;
   background-color: #222222;
 
+
   &__contacts {
     height: 70px;
     width: 100%;
@@ -114,5 +115,110 @@
         transform: scaleX(1);
       }
     }
+  }
+
+  &__block {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__titles {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  &__buttonLink {
+    padding: 0 10px;
+    font-size: 22px;
+    background: #ffb606;
+    color: #222222;
+    font-family: $mont;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    transition: all .3s ease;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      border: 2px solid #f0f0f0;
+    }
+  }
+
+  &__title {
+    font-size: 42px;
+    font-weight: 900;
+    font-family: $mont;
+    color: #f0f0f0;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: #f0f0f0;
+    font-family: $mont;
+    margin-bottom: 40px;
+
+    .fa-map-marker-alt {
+      color: #ffb606;
+      margin-right: 20px;
+    }
+  }
+
+  &__time {
+    font-size: 16px;
+    font-family: $mont;
+    color: #f0f0f0;
+    margin-bottom: 15px;
+  }
+
+  &__clickButton {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__cost {
+    font-size: 24px;
+    color: #222222;
+    background-color: #ffb606;
+    padding: 12px 33px;
+    font-family: $mont;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    transition: all .3s ease;
+    margin-right: 20px;
+    box-shadow: 0 0 25px 0px rgba(253, 197, 48, .3);
+
+    &:hover {
+      box-shadow: 0 0 35px 0px rgba(253, 197, 48, .6);
+    }
+  }
+
+  &__discont {
+    font-size: 21px;
+    font-family: $mont;
+    color: #f0f0f0;
   }
 }
