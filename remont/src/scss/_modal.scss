@@ -3,7 +3,7 @@
   height: 100vh;
   width: 100%;
   background: rgba($grey, .8);
-  position: absolute;
+  position: fixed;
   top: 0;
   backdrop-filter: blur(20px);
   z-index: 500;
@@ -19,7 +19,6 @@
     margin-bottom: 25px;
     font-family: Montserrat;
   }
-
 
   &__form {
     height: 100%;
@@ -85,9 +84,15 @@
   .close-form {
     color: #f0f0f0;
     font-family: $mont;
-    font-size: 15px;
+    font-size: 12px;
     text-decoration: underline;
     cursor: pointer;
     padding-top: 15px;
+  }
+
+  &__radio:checked + .label-filler {
+    background: orange;
+    border: 2px solid #222222;
+    box-shadow: 0px 0px 0px 2px #f0f0f0;
   }
 }

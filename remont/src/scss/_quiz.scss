@@ -1,0 +1,82 @@
+.re-modal__quiz {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  align-items: center;
+  justify-content: center;
+
+  &-label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .re-modal__label-text {
+      margin-bottom: 0;
+    }
+  }
+
+  &-quiz {
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  &-title {
+    text-align: center;
+    width: 100%;
+    font-size: 23px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-family: $mont;
+    color: #f0f0f0;
+  }
+}
+
+.controlButtons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  @include md-screen {
+    justify-content: flex-end;
+  }
+}
+
+.prev, .next, .end {
+  width: 120px;
+  background: #ffb606;
+  color: #222222;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-family: $mont;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+$orange: #ffb606;
+
+.end {
+  background: lighten($orange, 10%);
+}
+
+.prev {
+  margin-right: 10px;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.label-filler {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 7px;
+}
