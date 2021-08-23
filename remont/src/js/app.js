@@ -1,5 +1,13 @@
 let formFiller = [
     {
+        value: "Ім'я",
+        desc: ""
+    },
+    {
+        value: "Телефон",
+        desc: ""
+    },
+    {
         value: "Тип об'єкту",
         desc: ""
     },
@@ -8,12 +16,26 @@ let formFiller = [
         desc: ""
     },
     {
-        value: "Телефон",
+        value: "Площа",
         desc: ""
+    },
+    {
+        value: "Чи є матеріал",
+        desc: ""
+    },
+    {
+        value: "Чи є електрика",
+        desc: ""
+    },
+    {
+        value: "Знижка",
+        desc: ""
+    },
+    {
+        value: "Пройшов опитування",
+        desc: "Ні"
     }
 ];
-
-console.log(formFiller);
 
 function changeDesc(value, desc) {
     for (let i in formFiller) {
@@ -21,6 +43,26 @@ function changeDesc(value, desc) {
             formFiller[i].desc = desc;
             break;
         }
+    }
+}
+
+
+let finalText = "";
+
+function finalTextGenerate() {
+    finalText = "";
+    if (formFiller[(formFiller.length * 1) - 1].desc === "Ні") {
+        finalText = finalText + "Клієнт замовив зворотний дзвінок. \n"
+        for (let i = 0; i < 2; i++) {
+            finalText = finalText + formFiller[i].value + ": " + formFiller[i].desc + "\n"
+        }
+        console.log(finalText);
+    } else {
+        finalText = finalText + "Клієнт пройшов опитування \n"
+        formFiller.forEach((e) => {
+            finalText = finalText + e.value + ": " + e.desc + "\n"
+        })
+        console.log(finalText);
     }
 }
 
@@ -64,11 +106,11 @@ const a = document.querySelectorAll('[name="inputField"]');
 getFormSubmitButton.addEventListener("submit", (e) => {
     e.preventDefault();
     for (let i = 0; i < a.length; i++) {
-        changeDesc(formFiller[(i * 1) + 1].value, a[i].value);
+        changeDesc(formFiller[i].value, a[i].value);
     }
-    console.log(formFiller)
+    finalTextGenerate();
 })
-
+let controlElementArray = 2;
 const getQuiz = document.querySelectorAll(".re-modal__quiz-quiz");
 const getPrev = document.querySelector(".prev");
 const getNext = document.querySelector(".next");
@@ -83,6 +125,7 @@ getPrev.addEventListener("click", () => {
         getQuiz[coordinaleQuiz].classList.remove("so-invisible");
         endButton.classList.add("so-invisible");
         getNext.classList.remove("so-invisible");
+        controlElementArray = controlElementArray - 1;
     }
 });
 
@@ -112,24 +155,22 @@ endButton.addEventListener("click", () => {
     document.querySelector(".re-modal__quiz").classList.remove("so-invisible");
     document.querySelector(".re-modal__quiz").classList.add("so-invisible");
     document.querySelector(".re-modal__finalScreen").classList.remove("so-invisible");
+    changeDesc("Пройшов опитування", "Так");
 })
 
 const getFirstQ = document.querySelectorAll('[name="first-q-radio"]');
-getFirstQ.forEach((e) => {
-    e.addEventListener("change", () => {
-        if (e.checked) {
-            changeDesc("Тип об'єкту", e.value)
-            console.log(formFiller);
-        }
-    })
-})
-
 const getSecondQ = document.querySelectorAll('[name="second-q-radio"]');
-getSecondQ.forEach((e) => {
-    e.addEventListener("change", () => {
-        if (e.checked) {
-            changeDesc("Тип роботи", e.value)
-            console.log(formFiller);
-        }
+const getThirdQ = document.querySelectorAll('[name="areaInput"]');
+const getFourQ = document.querySelectorAll('[name="fourth-q-radio"]');
+const getFifthQ = document.querySelectorAll('[name="fifth-q-radio"]');
+const getSixQ = document.querySelectorAll('[name="six-q-radio"]');
+
+const ElementArray = [getFirstQ, getSecondQ, getThirdQ, getFourQ, getFifthQ, getSixQ];
+ElementArray.forEach((e) => {
+    e.forEach((el) => {
+        el.addEventListener("change", () => {
+            changeDesc(formFiller[controlElementArray].value, el.value);
+            controlElementArray = controlElementArray + 1;
+        })
     })
 })
