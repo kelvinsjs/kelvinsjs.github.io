@@ -1,0 +1,46 @@
+.re-about {
+  padding: 70px 0;
+
+  &__text {
+    font-size: 18px;
+    font-family: $mont;
+    color: #222222;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    padding-left: 30px;
+    margin-bottom: 30px;
+    &-item {
+      margin-bottom: 10px;
+      position: relative;
+      color: #222222;
+      font-size: 18px;
+      font-family: $mont;
+      font-weight: 400;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:before {
+        content: "—";
+        font-size: 18px;
+        position: absolute;
+        top: 0;
+        transform: translateX(-25px);
+      }
+    }
+    &-link {
+      font-weight: 700;
+
+      .notBold {
+        font-weight: 400;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.itsButton {
+  display: block;
+  margin: 0 auto;
+}

@@ -53,11 +53,13 @@ getNext.addEventListener("click", () => {
     }
 })
 
-document.querySelector(".re-header__cost").addEventListener("click", () => {
-    document.querySelector(".re-modal").classList.toggle("so-invisible");
-    document.querySelector(".re-modal__quiz").classList.remove("so-invisible");
-    document.querySelector(".re-modal__finalScreen").classList.remove("so-invisible");
-    document.querySelector(".re-modal__finalScreen").classList.add("so-invisible");
+document.querySelectorAll(".re-header__cost").forEach((e) => {
+    e.addEventListener("click", () => {
+        document.querySelector(".re-modal").classList.toggle("so-invisible");
+        document.querySelector(".re-modal__quiz").classList.remove("so-invisible");
+        document.querySelector(".re-modal__finalScreen").classList.remove("so-invisible");
+        document.querySelector(".re-modal__finalScreen").classList.add("so-invisible");
+    })
 })
 
 endButton.addEventListener("click", () => {
