@@ -1,6 +1,6 @@
 .re-header {
   width: 100%;
-  height: 100vh;
+  height: auto;
   background: url("../img/bgheader.jpg") no-repeat 0 0;
   background-blend-mode: multiply;
   background-size: cover;
@@ -220,6 +220,10 @@
     @include lg-screen {
       display: flex;
     }
+
+    @media only screen and (max-height: 720px) {
+      display: none;
+    }
   }
 
   &__buttonLink {
@@ -258,6 +262,10 @@
     @include sm-screen {
       font-size: 42px;
       text-align: left;
+    }
+
+    @media only screen and (max-height: 590px) and (min-width: 576px)  {
+      font-size: 30px;
     }
   }
 
@@ -375,4 +383,16 @@ display: none;
 .invisible li {
   height: 0;
   padding: 0;
+}
+
+.anotherPageHeader {
+  @include md-screen {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    padding-bottom: 10px;
+    border-radius: 0;
+  }
+}
+
+.anotherPageNav {
+  margin-bottom: 0;
 }

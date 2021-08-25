@@ -1,0 +1,20 @@
+.re-contacts {
+  padding: 20px 0;
+
+  &__idea {
+    display: block;
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 400;
+    font-family: $mont;
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    color: #222222;
+  }
+}
