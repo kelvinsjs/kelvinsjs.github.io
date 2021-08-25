@@ -35,6 +35,11 @@
       .notBold {
         font-weight: 400;
         margin-left: 5px;
+        display: none;
+
+        @include md-screen {
+          display: inline-block;
+        }
       }
     }
   }

@@ -1,0 +1,15 @@
+.re-partners {
+  padding: 20px 0;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &-item {
+      width: 25vw;
+      @include padding-hack(250px, contain);
+    }
+  }
+}

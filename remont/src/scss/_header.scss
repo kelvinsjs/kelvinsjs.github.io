@@ -6,6 +6,21 @@
   background-size: cover;
   background-color: #222222;
 
+  &__thankYou {
+    color: #f8f8f8;
+    font-weight: 900;
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-family: $mont;
+  }
+
+  &__back {
+    color: #f0f0f0;
+    font-family: $mont;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
   &__contacts {
     height: 70px;

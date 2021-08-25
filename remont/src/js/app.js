@@ -9,13 +9,15 @@ function closeModal() {
     document.querySelector(".re-modal").classList.toggle("so-invisible");
 }
 
-const callButton = document.querySelector(".re-header__callButton");
-callButton.addEventListener("click", () => {
-    document.querySelector(".re-modal").classList.toggle("so-invisible");
-    document.querySelector(".re-modal__quiz").classList.remove("so-invisible");
-    document.querySelector(".re-modal__quiz").classList.add("so-invisible");
-    document.querySelector(".re-modal__finalScreen").classList.remove("so-invisible");
-});
+const callButton = document.querySelectorAll(".re-header__callButton");
+callButton.forEach((e) => {
+    e.addEventListener("click", () => {
+        document.querySelector(".re-modal").classList.toggle("so-invisible");
+        document.querySelector(".re-modal__quiz").classList.remove("so-invisible");
+        document.querySelector(".re-modal__quiz").classList.add("so-invisible");
+        document.querySelector(".re-modal__finalScreen").classList.remove("so-invisible");
+    });
+})
 
 const closeFormButton = document.querySelector(".close-form");
 closeFormButton.addEventListener("click", closeModal);
