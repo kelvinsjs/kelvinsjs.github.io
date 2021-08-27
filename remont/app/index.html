@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>Ремонтні роботи</title>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
+    <title>Гільдія майстрів м. Кременчук</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/fav/favicon-16x16.png">
+    <link rel="manifest" href="./assets/fav/site.webmanifest">
+    <link rel="mask-icon" href="./assets/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/libs/slick-theme.css">
     <link rel="stylesheet" href="./assets/libs/slick.css">
@@ -27,34 +33,35 @@
             </button>
         </div>
     </div>
-    <div class="container">
-        <nav class="re-header__nav">
-            <a href="./index.html" class="re-header__logo">
+    <nav class="re-header__nav" id="navigation">
+        <a href="./index.html" class="re-header__logo">
                 <span>
                     Гільдія
                 </span>
-                <span>
+            <span>
                     Майстрів
                 </span>
-            </a>
-            <div class="re-header__hamb">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="re-header__list invisible">
-                <li class="re-header__list-item"><a href="./poslugy.html" class="re-header__link">
-                    Послуги
-                </a></li>
-                <li class="re-header__list-item"><a href="#" class="re-header__link">
-                    Ціни
-                </a></li>
-                <li class="re-header__list-item"><a href="./our-works.html" class="re-header__link">
-                    Наші роботи
-                </a></li>
-                <li class="re-header__list-item"><a href="./contacts.html" class="re-header__link">
-                    Контакти
-                </a></li>
-            </ul>
-        </nav>
+        </a>
+        <div class="re-header__hamb">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="re-header__list">
+            <li class="re-header__list-item"><a href="./poslugy.html" class="re-header__link">
+                Послуги
+            </a></li>
+            <li class="re-header__list-item"><a href="#" class="re-header__link">
+                Ціни
+            </a></li>
+            <li class="re-header__list-item"><a href="./our-works.html" class="re-header__link">
+                Наші роботи
+            </a></li>
+            <li class="re-header__list-item"><a href="./contacts.html" class="re-header__link">
+                Контакти
+            </a></li>
+        </ul>
+    </nav>
+    <div class="container">
+
         <div class="re-header__block">
             <div class="re-header__titles">
                 <h1 class="re-header__title">
@@ -78,16 +85,16 @@
             </div>
             <div class="re-header__buttons">
                 <a href="" class="re-header__buttonLink">
+                    <img src="./img/icon1.svg" alt="icon" class="re-header__buttonIcon">
                     Штукатурка
                 </a>
                 <a href="" class="re-header__buttonLink">
+                    <img src="./img/icon2.svg" alt="icon" class="re-header__buttonIcon">
                     Шпаклівка
                 </a>
                 <a href="" class="re-header__buttonLink">
-                    Фарбування
-                </a>
-                <a href="" class="re-header__buttonLink">
-                    Комплексний ремонт
+                    <img src="./img/icon3.svg" alt="icon" class="re-header__buttonIcon">
+                    Комплексні роботи
                 </a>
             </div>
         </div>
@@ -262,7 +269,7 @@
                 Чому наші клієнти нас рекомендують?
             </h2>
             <p class="re-about__text">
-                Наша компанія займається внутрішньою обробкою приміщень <b>у Кременчуці та районі</b>. Ми маємо чотири
+                Наша компанія займається ремонтом приміщень <b>у Кременчуці та районі</b>. Ми маємо чотири
                 основних напрямки:
             </p>
             <ul class="re-about__list">
@@ -271,9 +278,6 @@
                 </a></li>
                 <li class="re-about__list-item"><a href="#" class="re-about__list-link">
                     Шпаклівка
-                </a></li>
-                <li class="re-about__list-item"><a href="#" class="re-about__list-link">
-                    Фарбування та оздоблення
                 </a></li>
                 <li class="re-about__list-item"><a href="#" class="re-about__list-link">
                     Комплексні роботи та ремонт під ключ
