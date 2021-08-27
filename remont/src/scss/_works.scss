@@ -27,12 +27,12 @@
 
   &__gallery {
     width: 100%;
-    max-width: 500px;
     height: 370px;
     margin-bottom: 20px;
 
     @include lg-screen {
       margin-right: 100px;
+      max-width: 500px;
     }
   }
 

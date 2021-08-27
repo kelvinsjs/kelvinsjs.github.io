@@ -11,6 +11,7 @@
   &__list {
     padding-left: 30px;
     margin-bottom: 30px;
+
     &-item {
       margin-bottom: 10px;
       position: relative;
@@ -42,6 +43,54 @@
         }
       }
     }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    @include lg-screen {
+      justify-content: space-between;
+    }
+  }
+
+  &__button {
+    border: 1px solid #fdc530;
+    width: 220px;
+    min-height: 250px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+
+    &:last-child {
+      display: flex;
+      @media only screen and (min-width: 915px) and (max-width: 1140px) {
+        display: none;
+      }
+    }
+
+    @include sm-screen {
+      margin-bottom: 0px;
+    }
+
+    &-text {
+      letter-spacing: 1.92px;
+      text-align: center;
+      font-size: 16px;
+      font-family: $mont;
+      font-weight: 700;
+    }
+  }
+
+  &__img {
+    margin-bottom: 30px;
   }
 }
 
