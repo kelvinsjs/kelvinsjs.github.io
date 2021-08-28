@@ -259,14 +259,15 @@
 
   &__title {
     font-size: 7vw;
-    font-weight: 900;
+    font-weight: 700;
     font-family: $mont;
     color: #f0f0f0;
     margin-bottom: 30px;
     text-align: center;
 
     @include sm-screen {
-      font-size: 42px;
+      font-size: 54px;
+      line-height: 1;
       text-align: left;
     }
 
@@ -276,8 +277,9 @@
   }
 
   &__subtitle {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
+    letter-spacing: 1.44px;
     color: #f0f0f0;
     font-family: $mont;
     margin-bottom: 10px;
@@ -349,8 +351,9 @@
   }
 
   &__discont {
-    font-size: 15px;
+    font-size: 22px;
     font-family: $mont;
+    font-weight: 500;
     color: #f0f0f0;
 
     @include sm-screen {

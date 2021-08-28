@@ -13,11 +13,7 @@
     <meta name="theme-color" content="#ffffff">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./assets/libs/slick-theme.css">
-    <link rel="stylesheet" href="./assets/libs/slick.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-    </style>
 </head>
 <body>
 <header class="re-header">
@@ -59,7 +55,7 @@
         </ul>
     </nav>
 </header>
-<main class="re-main">
+<main>
     <section class="re-modal so-invisible">
         <div class="container">
             <form action="telegram.php" class="re-modal__form" method="POST">
@@ -222,144 +218,207 @@
             </form>
         </div>
     </section>
-    <section class="re-works">
+    <section class="re-price">
         <div class="container">
-            <h2 class="re-title ttu">
-                Наші роботи
-            </h2>
-            <ul class="re-works__list">
-                <li class="re-works__list-item">
-                    <div class="re-works__gallery">
-                        <div>
-                            <img src="./img/1-1.jpg" alt="img slide" class="re-works__img">
-                        </div>
-                        <div><img src="./img/1-2.jpg" alt="img slide" class="re-works__img"></div>
-                        <div><img src="./img/1-3.jpg" alt="img slide" class="re-works__img"></div>
-                    </div>
-                    <div class="re-works__text">
-                        <h3 class="re-works__title">Декоративна штукатурка "Барашек"</h3>
-                        <p class="re-works__subt">Виконані роботи: </p>
-                        <ul class="re-works__complete">
-                            <li class="re-works__complete-item">
-                                Штукатурка
-                            </li>
-                            <li class="re-works__complete-item">
-                                Оздоблення
-                            </li>
-                        </ul>
-                        <button class="re-header__callButton mainButton">
-                            Замовити зараз
-                        </button>
-                    </div>
-                </li>
-                <li class="re-works__list-item">
-                    <div class="re-works__gallery">
-                        <div>
-                            <img src="./img/2-1.jpg" alt="img slide" class="re-works__img">
-                        </div>
-                        <div><img src="./img/2-2.jpg" alt="img slide" class="re-works__img"></div>
-                        <div><img src="./img/2-3.jpg" alt="img slide" class="re-works__img"></div>
-                    </div>
-                    <div class="re-works__text">
-                        <h3 class="re-works__title">Повний ремонт салону краси</h3>
-                        <p class="re-works__subt">Виконані роботи: </p>
-                        <ul class="re-works__complete">
-                            <li class="re-works__complete-item">
-                                Укладання плитки
-                            </li>
-                            <li class="re-works__complete-item">
-                                Штукатурка
-                            </li>
-                            <li class="re-works__complete-item">
-                                Поклейка шпалер
-                            </li>
-                            <li class="re-works__complete-item">
-                                Оздоблення
-                            </li>
-                        </ul>
-                        <button class="re-header__callButton mainButton">
-                            Замовити зараз
-                        </button>
-                    </div>
-                </li>
-                <li class="re-works__list-item">
-                    <div class="re-works__gallery">
-                        <div>
-                            <img src="./img/3-1.jpg" alt="img slide" class="re-works__img">
-                        </div>
-                        <div><img src="./img/3-2.jpg" alt="img slide" class="re-works__img"></div>
-                        <div><img src="./img/3-3.jpg" alt="img slide" class="re-works__img"></div>
-                        <div><img src="./img/3-4.jpg" alt="img slide" class="re-works__img"></div>
-                    </div>
-                    <div class="re-works__text">
-                        <h3 class="re-works__title">Ремонт дитячої кімнати</h3>
-                        <p class="re-works__subt">Виконані роботи: </p>
-                        <ul class="re-works__complete">
-                            <li class="re-works__complete-item">
-                                Штукатурка
-                            </li>
-                            <li class="re-works__complete-item">
-                                Поклейка шпалер
-                            </li>
-                            <li class="re-works__complete-item">
-                                Ремонт стелі
-                            </li>
-                        </ul>
-                        <button class="re-header__callButton mainButton">
-                            Замовити зараз
-                        </button>
-                    </div>
-                </li>
-                <li class="re-works__list-item">
-                    <div class="re-works__gallery">
-                        <div>
-                            <img src="./img/4.jpg" alt="img slide" class="re-works__img">
+            <h2 class="re-title" style="margin-bottom: 40px;">Прайс-лист на наші послуги</h2>
+            <div class="price-box-i" id="shtukaturka">
+                <div class="price-box-i-title"> Штукатурка</div>
+                <div class="price-box-i-row price-box-i-row-top">
+                    <div class="work-name">Вид роботи</div>
+                    <div class="work-unit">Одиниця виміру</div>
+                    <div class="work-price">Ціна у грн.</div>
+                </div>
+                <div class="price-box-rows-wrapper">
+                    <div class="price-box-i-row">
+                        <div class="work-name"> Штукатурка стін</div>
+                        <div class="work-unit"> м.кв.</div>
+                        <div class="work-price">
+                            150
                         </div>
                     </div>
-                    <div class="re-works__text">
-                        <h3 class="re-works__title">Комплексний ремонт кімнати</h3>
-                        <p class="re-works__subt">Виконані роботи: </p>
-                        <ul class="re-works__complete">
-                            <li class="re-works__complete-item">
-                                Поклейка шпалер
-                            </li>
-                            <li class="re-works__complete-item">
-                                Вкладання підлоги
-                            </li>
-                        </ul>
-                        <button class="re-header__callButton mainButton">
-                            Замовити зараз
-                        </button>
-                    </div>
-                </li>
-                <li class="re-works__list-item">
-                    <div class="re-works__gallery">
-                        <div>
-                            <img src="./img/5-1.jpg" alt="img slide" class="re-works__img">
+
+                    <div class="price-box-i-row">
+                        <div class="work-name"> Штукатурка відкосів</div>
+                        <div class="work-unit"> м.пог.</div>
+                        <div class="work-price">
+                            150
                         </div>
-                        <div><img src="./img/5-2.jpg" alt="img slide" class="re-works__img"></div>
-                        <div><img src="./img/5-3.jpg" alt="img slide" class="re-works__img"></div>
                     </div>
-                    <div class="re-works__text">
-                        <h3 class="re-works__title">Декоративна штукатурка "Велюр"</h3>
-                        <p class="re-works__subt">Виконані роботи: </p>
-                        <ul class="re-works__complete">
-                            <li class="re-works__complete-item">
-                                Штукатурка
-                            </li>
-                            <li class="re-works__complete-item">
-                                Оздоблення
-                            </li>
-                        </ul>
-                        <button class="re-header__callButton mainButton">
-                            Замовити зараз
-                        </button>
+                    <div class="price-box-i-row">
+                        <div class="work-name"> Штукатурка стелі</div>
+                        <div class="work-unit"> м.кв.</div>
+                        <div class="work-price">
+                            200
+                        </div>
                     </div>
-                </li>
-            </ul>
-            <a href="https://www.facebook.com/stroim.pod.klych/" class="re-works__more" target="_blank">
-                Більше прикладів робіт у нашому Facebook
-            </a>
+                    <div class="price-box-i-row">
+                        <div class="work-name"> Повна геометрія приміщення</div>
+                        <div class="work-unit"> м.кв.</div>
+                        <div class="work-price">
+                            200
+                        </div>
+                    </div>
+                    <div class="price-box-i-row">
+                        <div class="work-name"> Штукатурка радіусів</div>
+                        <div class="work-unit"> м.кв./пог.</div>
+                        <div class="work-price">
+                            230
+                        </div>
+                    </div>
+                    <div class="price-box-i-row">
+                        <div class="work-name"> Армування</div>
+                        <div class="work-unit"> м.кв./пог.</div>
+                        <div class="work-price">
+                            50
+                        </div>
+                    </div>
+                    <div class="price-box-i-row">
+                        <div class="work-name"> Додаткові роботи</div>
+                        <div class="work-unit"></div>
+                        <div class="work-price">
+                            договірна
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="price-box-i" id="shpak">
+                <div class="price-box-i-title"> Шпаклівка</div>
+                <div class="price-box-i-row price-box-i-row-top">
+                    <div class="work-name">Вид роботи</div>
+                    <div class="work-unit">Одиниця виміру</div>
+                    <div class="work-price">Ціна у грн.</div>
+                </div>
+                <div class="price-box-rows-wrapper">
+                    <div class="price-box-i-row">
+                        <div class="work-name">Шпаклівка стін під шпалери</div>
+                        <div class="work-unit"> м.кв.</div>
+                        <div class="work-price">
+                            90
+                        </div>
+                    </div>
+
+                    <div class="price-box-i-row">
+                        <div class="work-name">Шпаклівка стін під фарбування</div>
+                        <div class="work-unit"> м.кв.</div>
+                        <div class="work-price">
+                            140
+                        </div>
+                    </div>
+                    <div class="price-box-i-row">
+                        <div class="work-name">Шпаклівка укосів під фарбування</div>
+                        <div class="work-unit"> м.пог.</div>
+                        <div class="work-price">
+                            140
+                        </div>
+                    </div>
+                    <div class="price-box-i-row">
+                        <div class="work-name">Шпаклівка стелі під фарбування</div>
+                        <div class="work-unit"> м.кв.</div>
+                        <div class="work-price">
+                           170
+                        </div>
+                    </div>
+                    <div class="price-box-i-row">
+                        <div class="work-name"> Поклейка склополотна</div>
+                        <div class="work-unit"> м.кв./пог.</div>
+                        <div class="work-price">
+                            230
+                        </div>
+                    </div>
+                    <div class="price-box-i-row">
+                        <div class="work-name">Подготовка под поклейку стеклохолста</div>
+                        <div class="work-unit"> м.кв./пог.</div>
+                        <div class="work-price">
+                            50
+                        </div>
+                    </div>
+                    <div class="price-box-i-row">
+                        <div class="work-name"> Додаткові роботи</div>
+                        <div class="work-unit"></div>
+                        <div class="work-price">
+                            Договірна
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="price-box-i" id="paint">
+                <div class="price-box-i-title">Малярні роботи</div>
+                <div class="price-box-i-row price-box-i-row-top">
+                    <div class="work-name">Вид роботи</div>
+                    <div class="work-unit">Одиниця виміру</div>
+                    <div class="work-price">Ціна у грн.</div>
+                </div>
+                <div class="price-box-rows-wrapper">
+                    <div class="price-box-i-row">
+                        <div class="work-name">Фарбування стін</div>
+                        <div class="work-unit"> м.кв.</div>
+                        <div class="work-price">
+                            85
+                        </div>
+                    </div>
+
+                    <div class="price-box-i-row">
+                        <div class="work-name">Фарбування стель</div>
+                        <div class="work-unit"> м.пог.</div>
+                        <div class="work-price">
+                            95
+                        </div>
+                    </div>
+                    <div class="price-box-i-row">
+                        <div class="work-name">Фарбування укосів</div>
+                        <div class="work-unit">м.пог.</div>
+                        <div class="work-price">
+                            80
+                        </div>
+                    </div>
+                    <div class="price-box-i-row">
+                        <div class="work-name">Примикання 2-х кольорів</div>
+                        <div class="work-unit"> м.пог</div>
+                        <div class="work-price">
+                           100
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="price-box-i">
+                <div class="price-box-i-title">Додаткові роботи</div>
+                <div class="price-box-i-row price-box-i-row-top">
+                    <div class="work-name">Вид роботи</div>
+                    <div class="work-unit">Одиниця виміру</div>
+                    <div class="work-price">Ціна у грн.</div>
+                </div>
+                <div class="price-box-rows-wrapper">
+                    <div class="price-box-i-row">
+                        <div class="work-name">доставка матеріалів</div>
+                        <div class="work-unit"></div>
+                        <div class="work-price">
+                            від 470
+                        </div>
+                    </div>
+
+                    <div class="price-box-i-row">
+                        <div class="work-name">Вантажники</div>
+                        <div class="work-unit"> т</div>
+                        <div class="work-price">
+                            від 590
+                        </div>
+                    </div>
+                    <div class="price-box-i-row">
+                        <div class="work-name">Вивіз сміття</div>
+                        <div class="work-unit"></div>
+                        <div class="work-price">
+                            від 1400
+                        </div>
+                    </div>
+                    <div class="price-box-i-row">
+                        <div class="work-name">Демонтажні роботи</div>
+                        <div class="work-unit"> м.кв/пог.</div>
+                        <div class="work-price">
+                            від 50
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </main>
@@ -383,10 +442,6 @@
 <script async src="https://kit.fontawesome.com/c55362b8b5.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/jquery.inputmask.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/inputmask/jquery.inputmask.min.js"></script>
-<script src="assets/libs/slick.min.js"></script>
-<script>
-    $('.re-works__gallery').slick();
-</script>
 <script>
     $("#phoneInput").inputmask({"mask": "+38 (999) 999 99 99"});
 </script>
