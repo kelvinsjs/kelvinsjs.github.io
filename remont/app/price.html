@@ -631,13 +631,13 @@
                         <span class="re-modal__label-text">
                             Ваше ім'я:
                         </span>
-                        <input type="text" class="re-modal__input" id="nameInput" name="nameInput">
+                        <input type="text" class="re-modal__input" id="nameIn" name="nameInput">
                     </label>
                     <label class="re-modal__label">
                         <span class="re-modal__label-text">
                             Ваш телефон:
                         </span>
-                        <input type="text" id="phoneInput" class="re-modal__input" name="phoneInput">
+                        <input type="text" id="phoneIn" class="re-modal__input" name="phoneInput">
                     </label>
                     <button type="submit" class="re-modal__button">
                         <i class="fas fa-paper-plane"></i> Відправити
@@ -669,6 +669,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/inputmask/jquery.inputmask.min.js"></script>
 <script>
     $("#phoneInput").inputmask({"mask": "+38 (999) 999 99 99"});
+    $("#phoneIn").inputmask({"mask": "+38 (999) 999 99 99"});
 </script>
 </body>
 </html>
