@@ -13,3 +13,25 @@
     max-width: 500px;
   }
 }
+
+.re-modal__test-img {
+  @include padding-hack(150px, cover);
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.re-modal__test__q {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.re-modal__test-label {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

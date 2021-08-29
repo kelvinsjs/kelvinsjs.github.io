@@ -1,20 +1,87 @@
 .re-contacts {
-  padding: 60px 0;
+  background: #222222;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include xl-screen {
+    flex-direction: row;
+  }
+
+  &__map {
+   width: 100%;
+    @include padding-hack(300px, contain);
+    position: relative;
+
+    @include xl-screen {
+      width: 50%;
+      @include padding-hack(510px, cover);
+      background: #3d3d3d;
+      background-blend-mode: multiply;
+    }
+  }
+
+  &__text {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 101;
+
+    @include xl-screen {
+      width: 50%;
+    }
+
+    &:before {
+      @include xl-screen {
+        content: "";
+      }
+      content: none;
+      position: absolute;
+      height: 0;
+      width: 100px;
+      border-top: 510px solid #222222;
+      border-left: 289px solid transparent;
+      z-index: 100;
+      transform: translateX(-288px);
+    }
+  }
 
   &__idea {
     display: block;
     width: 100%;
-    font-size: 25px;
+    font-size: 18px;
     text-align: center;
     font-weight: 400;
     font-family: $mont;
     margin-bottom: 15px;
+
+    @include md-screen {
+      font-size: 25px;
+    }
+
+    @include xl-screen {
+      text-align: left;
+    }
+
     &:last-child {
       margin-bottom: 0;
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @include xl-screen {
+        justify-content: flex-start;
+      }
+
+      button {
+        margin: 0 0 0 15px;
+      }
     }
-    color: #222222;
+
+    color: #f0f0f0;
   }
 }

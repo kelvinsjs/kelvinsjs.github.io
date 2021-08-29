@@ -104,3 +104,41 @@ $(window).scroll(function(){
         }
     }
 });
+
+const getTest = document.querySelectorAll(".re-modal__test-test");
+const getPre = document.querySelector(".pre");
+const getNex = document.querySelector(".nex");
+const endButto = document.querySelector(".en");
+let coordinaleQui = 0;
+getPre.addEventListener("click", () => {
+    if (coordinaleQui === 0) {
+        console.log("zero element, cant make")
+    } else {
+        getTest[coordinaleQui].classList.add("so-invisible");
+        coordinaleQui = coordinaleQui - 1;
+        getTest[coordinaleQuiz].classList.remove("so-invisible");
+        endButto.classList.add("so-invisible");
+        getNex.classList.remove("so-invisible");
+    }
+});
+
+getNex.addEventListener("click", () => {
+    if (coordinaleQuiz >= getTest.length - 1) {
+        console.log("its over, cant make");
+        coordinaleQui = getTest.length - 1;
+    } else {
+        getTest[coordinaleQui].classList.add("so-invisible");
+        coordinaleQui = coordinaleQui + 1;
+        if (coordinaleQui >= getTest.length - 1) {
+            getNex.classList.add("so-invisible");
+            endButto.classList.remove("so-invisible");
+        }
+        getTest[coordinaleQui].classList.remove("so-invisible");
+    }
+})
+
+endButto.addEventListener("click", () => {
+    document.querySelector(".re-order__tests").classList.remove("so-invisible");
+    document.querySelector(".re-order__tests").classList.add("so-invisible");
+    document.querySelector(".re-order__final").classList.remove("so-invisible");
+})
