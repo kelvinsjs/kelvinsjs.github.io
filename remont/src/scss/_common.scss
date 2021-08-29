@@ -12,6 +12,7 @@ body {
   width: 100%;
   $base-size: 16px;
   font-size: $base-size;
+  letter-spacing: 0.72px;
 }
 
 .container {
@@ -48,10 +49,21 @@ a {
   text-align: left;
   color: $grey;
   font-family: $mont;
-  font-weight: 900;
+  font-weight: 400;
   font-size: 25px;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
   position: relative;
+  text-transform: uppercase;
+  line-height: 1;
+
+  strong {
+    display: block;
+    margin-bottom: 0;
+    line-height: 0.8;
+    &:first-letter {
+      font-size: 50px;
+    }
+  }
 
   &:before {
     position: absolute;
@@ -72,8 +84,8 @@ a {
   }
 
   @include md-screen {
-    font-size: 2.395vw;
-    margin-bottom: 6vh;
+    font-size: 30px;
+    margin-bottom: 50px;
   }
 }
 

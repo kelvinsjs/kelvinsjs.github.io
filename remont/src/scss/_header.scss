@@ -46,9 +46,9 @@
   &__phoneLink {
     text-decoration: none;
     color: #f0f0f0;
-    font-size: 3vw;
+    font-size: 15px;
     font-family: $mont;
-    font-weight: 700;
+    font-weight: 400;
     margin-right: 20px;
     @include sm-screen {
       font-size: 20px;
@@ -84,11 +84,10 @@
     width: 100vw;
     max-width: 1200px;
     padding: 0 15px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin: 0 auto 30px;
     background: #f0f0f0;
 
     @include md-screen {
@@ -258,17 +257,16 @@
   }
 
   &__title {
-    font-size: 7vw;
+    font-size: 35px;
     font-weight: 700;
     font-family: $mont;
     color: #f0f0f0;
     margin-bottom: 30px;
-    text-align: center;
+    text-align: left;
 
     @include sm-screen {
       font-size: 54px;
       line-height: 1;
-      text-align: left;
     }
 
     @media only screen and (max-height: 590px) and (min-width: 576px) {
@@ -277,18 +275,17 @@
   }
 
   &__subtitle {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     letter-spacing: 1.44px;
     color: #f0f0f0;
     font-family: $mont;
-    margin-bottom: 10px;
-    text-align: center;
+    margin-bottom: 50px;
+    text-align: left;
 
     @include sm-screen {
       font-size: 24px;
       margin-bottom: 40px;
-      text-align: left;
     }
 
     .fa-map-marker-alt {
@@ -302,15 +299,13 @@
   }
 
   &__time {
-    font-size: 14px;
+    font-size: 16px;
     font-family: $mont;
     color: #f0f0f0;
-    margin-bottom: 50px;
-    text-align: center;
+    margin-bottom: 20px;
+    text-align: left;
 
     @include sm-screen {
-      text-align: left;
-      font-size: 16px;
       margin-bottom: 15px;
     }
   }
@@ -318,11 +313,12 @@
   &__clickButton {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     @include sm-screen {
       flex-direction: row;
       justify-content: flex-start;
+      align-items: center;
     }
   }
 
@@ -332,11 +328,11 @@
     background-color: #ffb606;
     padding: 12px 33px;
     font-family: $mont;
-    font-weight: 700;
+    font-weight: 400;
     outline: none;
     border: none;
     transition: all .3s ease;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     cursor: pointer;
     box-shadow: 0 0 25px 0px rgba(253, 197, 48, .3);
 
@@ -351,10 +347,11 @@
   }
 
   &__discont {
-    font-size: 22px;
+    font-size: 20px;
     font-family: $mont;
     font-weight: 500;
     color: #f0f0f0;
+    letter-spacing: 1.44px;
 
     @include sm-screen {
       font-size: 21px;

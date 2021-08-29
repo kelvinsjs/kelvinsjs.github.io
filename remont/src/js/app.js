@@ -96,6 +96,7 @@ $(window).scroll(function(){
         $('#navigation').css('position','static').css("display", "flex").css("background", "transparent");
         if($(window).width() < 769) {
             $(".re-header__list").css('top','120px');
+            $('#navigation').css("background", "white");
         } else {
             $(".re-header__link").css("color", "#f0f0f0").css("font-weight", "400");
             $(".re-header__logo").css('padding-bottom', "40px").css("background-color", "#f0f0f0").css("color", "#222222");

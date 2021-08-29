@@ -10,6 +10,13 @@
 
 @font-face {
   font-family: "ProximaNova";
+  src: url('../assets/fonts/ProximaNova-RegularIt.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ProximaNova";
   src: url("../assets/fonts/ProximaNova-Semibold.woff") format('woff');
   font-weight: 500;
   font-style: normal;

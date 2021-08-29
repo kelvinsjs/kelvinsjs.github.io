@@ -6,6 +6,11 @@
     font-family: $mont;
     color: #222222;
     margin-bottom: 20px;
+    letter-spacing: 0.72px;
+    
+    b, strong {
+      font-style: italic;
+    }
   }
 
   &__list {
@@ -13,12 +18,17 @@
     margin-bottom: 30px;
 
     &-item {
-      margin-bottom: 10px;
+      margin-bottom: 1px;
       position: relative;
       color: #222222;
       font-size: 18px;
       font-family: $mont;
       font-weight: 400;
+
+      b, strong {
+        font-style: italic;
+      }
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -31,7 +41,8 @@
       }
     }
     &-link {
-      font-weight: 700;
+      font-weight: 400;
+      font-style: italic;
 
       .notBold {
         font-weight: 400;

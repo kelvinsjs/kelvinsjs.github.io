@@ -11,7 +11,7 @@
 
   &__map {
    width: 100%;
-    @include padding-hack(300px, contain);
+    @include padding-hack(250px, contain);
     position: relative;
 
     @include xl-screen {
@@ -51,13 +51,20 @@
   }
 
   &__idea {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     font-family: $mont;
     margin-bottom: 15px;
+
+    .fab, .fas {
+      font-size: 30px;
+      margin-right: 10px;
+    }
 
     @include md-screen {
       font-size: 25px;

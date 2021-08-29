@@ -9,7 +9,11 @@
 
     &-item {
       width: 25vw;
-      @include padding-hack(250px, contain);
+      @include padding-hack(150px, contain);
+
+      @include md-screen {
+        @include padding-hack(250px, contain);
+      }
     }
   }
 }
