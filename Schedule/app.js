@@ -1,7 +1,7 @@
 const mainBox = $("#main");
 mainBox.append(`
 	<h1 class="title">
-	Розклад занять 1-го курсу ІГ ГІС
+	Розклад занять 2-го курсу ІГ ГІС
 	</h1>
 	`);
 for (let i = 0; i < 5; i++) {
@@ -21,7 +21,7 @@ Date.prototype.getWeek = function() {
 var myDate = new Date();
 var weekNumber = myDate.getWeek();
 let typeOfWeek;
-typeOfWeek = weekNumber % 2 == 0 ? "even" : "odd";
+typeOfWeek = weekNumber % 2 == 0 ? "odd" : "even";
 const colors = "8cdafe 8cdafe bef2cc fdda9a fedb9b abfdf1 00ad99 fff0ab fea7b0".split("\n").join(" ").split(" ");
 let completeColors = [];
 
