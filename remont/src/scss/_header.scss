@@ -263,6 +263,20 @@
     color: #f0f0f0;
     margin-bottom: 30px;
     text-align: left;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    &:first-letter {
+      text-shadow: -3px -3px #fdc530, 3px 3px #fdc530, -3px 3px #fdc530, 3px -3px #fdc530;
+      font-size: 52px;
+
+      @include md-screen {
+        font-size: 72px;
+      }
+
+      @include xl-screen {
+        font-size: 110px;
+      }
+    }
 
     @include sm-screen {
       font-size: 54px;
