@@ -117,7 +117,7 @@ getPre.addEventListener("click", () => {
     } else {
         getTest[coordinaleQui].classList.add("so-invisible");
         coordinaleQui = coordinaleQui - 1;
-        getTest[coordinaleQuiz].classList.remove("so-invisible");
+        getTest[coordinaleQui].classList.remove("so-invisible");
         endButto.classList.add("so-invisible");
         getNex.classList.remove("so-invisible");
     }
