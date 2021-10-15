@@ -67,6 +67,31 @@ $orange: #ffb606;
   margin-right: 10px;
 }
 
+.pre, .nex, .en {
+  width: 120px;
+  background: #ffb606;
+  color: #222222;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-family: $mont;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+$orange: #ffb606;
+
+.en {
+  background: lighten($orange, 10%);
+}
+
+.pre {
+  margin-right: 10px;
+}
+
 .ta-c {
   text-align: center;
 }

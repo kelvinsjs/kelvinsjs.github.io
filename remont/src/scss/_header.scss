@@ -1,11 +1,26 @@
 .re-header {
   width: 100%;
-  height: 100vh;
+  height: auto;
   background: url("../img/bgheader.jpg") no-repeat 0 0;
   background-blend-mode: multiply;
   background-size: cover;
-  background-color: #222222;
+  background-color: #3d3d3d;
 
+  &__thankYou {
+    color: #f8f8f8;
+    font-weight: 900;
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-family: $mont;
+  }
+
+  &__back {
+    color: #f0f0f0;
+    font-family: $mont;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
   &__contacts {
     height: 70px;
@@ -18,9 +33,10 @@
       justify-content: space-between;
       height: 100%;
       align-items: center;
+      padding: 0;
       padding: 0 0 0 15px;
 
-      @include sm-screen {
+      @include  md-screen {
         padding: 0 15px;
         justify-content: flex-end;
       }
@@ -30,9 +46,9 @@
   &__phoneLink {
     text-decoration: none;
     color: #f0f0f0;
-    font-size: 3vw;
+    font-size: 15px;
     font-family: $mont;
-    font-weight: 700;
+    font-weight: 400;
     margin-right: 20px;
     @include sm-screen {
       font-size: 20px;
@@ -65,13 +81,19 @@
   }
 
   &__nav {
+    width: 100vw;
+    max-width: 1200px;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin: 0 auto 30px;
+    background: #f0f0f0;
 
     @include md-screen {
       justify-content: space-between;
+      background: transparent;
+      position: inherit;
     }
   }
 
@@ -79,20 +101,17 @@
     font-size: 30px;
     text-decoration: none;
     font-family: $tinos;
-    color: #f0f0f0;
+    color: #222222;
     position: relative;
 
 
     @include md-screen {
       margin-bottom: 0;
       color: #222222;
-      padding: 10px 20px;
-      padding-bottom: 40px;
+      padding: 10px 20px 40px;
       background-color: #f0f0f0;
       clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
-      border-radius: 5px;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
+      border-radius: 0 0 5px 5px;
     }
 
     & > span {
@@ -117,9 +136,8 @@
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    max-width: 500px;
     position: absolute;
-    top: 70px;
+    top: 120px;
     left: 0;
     z-index: 100;
     transition: all .3s ease;
@@ -130,6 +148,7 @@
       padding: 15px 0 15px 15px;
 
       @include md-screen {
+        position: relative;
         background: none;
         padding: 0;
         width: auto;
@@ -140,6 +159,7 @@
       display: flex;
       position: inherit;
       flex-direction: row;
+      max-width: 500px;
     }
 
     @include lg-screen {
@@ -149,7 +169,6 @@
 
   &__link {
     color: #f0f0f0;
-    position: relative;
     font-size: 20px;
     font-family: $mont;
     font-weight: 400;
@@ -200,7 +219,7 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
 
     @include lg-screen {
       display: flex;
@@ -232,32 +251,55 @@
     }
   }
 
+  &__buttonIcon {
+    width: 50px;
+    margin-right: 10px;
+  }
+
   &__title {
-    font-size: 7vw;
-    font-weight: 900;
+    font-size: 35px;
+    font-weight: 700;
     font-family: $mont;
     color: #f0f0f0;
     margin-bottom: 30px;
-    text-align: center;
+    text-align: left;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    &:first-letter {
+      text-shadow: -3px -3px #fdc530, 3px 3px #fdc530, -3px 3px #fdc530, 3px -3px #fdc530;
+      font-size: 52px;
+
+      @include md-screen {
+        font-size: 72px;
+      }
+
+      @include xl-screen {
+        font-size: 110px;
+      }
+    }
 
     @include sm-screen {
-      font-size: 42px;
-      text-align: left;
+      font-size: 54px;
+      line-height: 1;
+    }
+
+    @media only screen and (max-height: 590px) and (min-width: 576px) {
+      font-size: 30px;
     }
   }
 
   &__subtitle {
     font-size: 20px;
     font-weight: 400;
+    letter-spacing: 1.44px;
     color: #f0f0f0;
     font-family: $mont;
-    margin-bottom: 10px;
-    text-align: center;
+    margin-bottom: 50px;
+    text-align: left;
 
     @include sm-screen {
       font-size: 24px;
       margin-bottom: 40px;
-      text-align: left;
     }
 
     .fa-map-marker-alt {
@@ -271,15 +313,13 @@
   }
 
   &__time {
-    font-size: 14px;
+    font-size: 16px;
     font-family: $mont;
     color: #f0f0f0;
-    margin-bottom: 50px;
-    text-align: center;
+    margin-bottom: 20px;
+    text-align: left;
 
     @include sm-screen {
-      text-align: left;
-      font-size: 16px;
       margin-bottom: 15px;
     }
   }
@@ -287,11 +327,12 @@
   &__clickButton {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     @include sm-screen {
       flex-direction: row;
       justify-content: flex-start;
+      align-items: center;
     }
   }
 
@@ -301,11 +342,11 @@
     background-color: #ffb606;
     padding: 12px 33px;
     font-family: $mont;
-    font-weight: 700;
+    font-weight: 400;
     outline: none;
     border: none;
     transition: all .3s ease;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     cursor: pointer;
     box-shadow: 0 0 25px 0px rgba(253, 197, 48, .3);
 
@@ -320,9 +361,11 @@
   }
 
   &__discont {
-    font-size: 15px;
+    font-size: 20px;
     font-family: $mont;
+    font-weight: 500;
     color: #f0f0f0;
+    letter-spacing: 1.44px;
 
     @include sm-screen {
       font-size: 21px;
@@ -335,7 +378,7 @@
     align-items: center;
     width: 50px;
     height: 50px;
-    color: #f0f0f0;
+    color: #222;
     position: relative;
     z-index: 400;
 
@@ -350,14 +393,21 @@
 }
 
 .invisible {
-display: none;
+  display: none;
 
-  @include md-screen{
+  @include md-screen {
     display: flex;
   }
 }
 
-.invisible li {
-  height: 0;
-  padding: 0;
+.anotherPageHeader {
+  @include md-screen {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    padding-bottom: 10px;
+    border-radius: 0;
+  }
+}
+
+.anotherPageNav {
+  margin-bottom: 0;
 }

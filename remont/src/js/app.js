@@ -1,84 +1,3 @@
-let formFiller = [
-    {
-        value: "Ім'я",
-        desc: ""
-    },
-    {
-        value: "Телефон",
-        desc: ""
-    },
-    {
-        value: "Тип об'єкту",
-        desc: ""
-    },
-    {
-        value: "Тип роботи",
-        desc: ""
-    },
-    {
-        value: "Площа",
-        desc: ""
-    },
-    {
-        value: "Чи є матеріал",
-        desc: ""
-    },
-    {
-        value: "Чи є електрика",
-        desc: ""
-    },
-    {
-        value: "Знижка",
-        desc: ""
-    },
-    {
-        value: "Пройшов опитування",
-        desc: "Ні"
-    }
-];
-
-function changeDesc(value, desc) {
-    for (let i in formFiller) {
-        if (formFiller[i].value == value) {
-            formFiller[i].desc = desc;
-            break;
-        }
-    }
-}
-
-
-let finalText = "";
-
-function finalTextGenerate() {
-    finalText = "";
-    if (formFiller[(formFiller.length * 1) - 1].desc === "Ні") {
-        finalText = finalText + "Клієнт замовив зворотний дзвінок. \n"
-        for (let i = 0; i < 2; i++) {
-            finalText = finalText + formFiller[i].value + ": " + formFiller[i].desc + "\n"
-        }
-        console.log(finalText);
-    } else {
-        finalText = finalText + "Клієнт пройшов опитування \n"
-        formFiller.forEach((e) => {
-            finalText = finalText + e.value + ": " + e.desc + "\n"
-        })
-        console.log(finalText);
-    }
-}
-
-const typeRadio = document.querySelectorAll('[name="type-radio"]');
-typeRadio.forEach((e) => {
-    e.addEventListener("change", () => {
-        changeDesc("Тип роботи", e.value);
-        console.log(formFiller);
-    })
-})
-
-const form = document.querySelector(".re-test__form");
-form.addEventListener("submit", (e) => {
-
-})
-
 const hambButton = document.querySelector(".re-header__hamb");
 hambButton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -90,27 +9,20 @@ function closeModal() {
     document.querySelector(".re-modal").classList.toggle("so-invisible");
 }
 
-const callButton = document.querySelector(".re-header__callButton");
-callButton.addEventListener("click", () => {
-    document.querySelector(".re-modal").classList.toggle("so-invisible");
-    document.querySelector(".re-modal__quiz").classList.remove("so-invisible");
-    document.querySelector(".re-modal__quiz").classList.add("so-invisible");
-    document.querySelector(".re-modal__finalScreen").classList.remove("so-invisible");
-});
+const callButton = document.querySelectorAll(".re-header__callButton");
+callButton.forEach((e) => {
+    e.addEventListener("click", () => {
+        document.querySelector(".re-modal").classList.toggle("so-invisible");
+        document.querySelector(".re-modal__quiz").classList.remove("so-invisible");
+        document.querySelector(".re-modal__quiz").classList.add("so-invisible");
+        document.querySelector(".re-modal__finalScreen").classList.remove("so-invisible");
+    });
+})
 
 const closeFormButton = document.querySelector(".close-form");
 closeFormButton.addEventListener("click", closeModal);
 
-const getFormSubmitButton = document.querySelector(".re-modal__form");
 const a = document.querySelectorAll('[name="inputField"]');
-getFormSubmitButton.addEventListener("submit", (e) => {
-    e.preventDefault();
-    for (let i = 0; i < a.length; i++) {
-        changeDesc(formFiller[i].value, a[i].value);
-    }
-    finalTextGenerate();
-})
-let controlElementArray = 2;
 const getQuiz = document.querySelectorAll(".re-modal__quiz-quiz");
 const getPrev = document.querySelector(".prev");
 const getNext = document.querySelector(".next");
@@ -125,7 +37,6 @@ getPrev.addEventListener("click", () => {
         getQuiz[coordinaleQuiz].classList.remove("so-invisible");
         endButton.classList.add("so-invisible");
         getNext.classList.remove("so-invisible");
-        controlElementArray = controlElementArray - 1;
     }
 });
 
@@ -144,33 +55,91 @@ getNext.addEventListener("click", () => {
     }
 })
 
-document.querySelector(".re-header__cost").addEventListener("click", () => {
-    document.querySelector(".re-modal").classList.toggle("so-invisible");
-    document.querySelector(".re-modal__quiz").classList.remove("so-invisible");
-    document.querySelector(".re-modal__finalScreen").classList.remove("so-invisible");
-    document.querySelector(".re-modal__finalScreen").classList.add("so-invisible");
+document.querySelectorAll(".re-header__cost").forEach((e) => {
+    e.addEventListener("click", () => {
+        document.querySelector(".re-modal").classList.toggle("so-invisible");
+        document.querySelector(".re-modal__quiz").classList.remove("so-invisible");
+        document.querySelector(".re-modal__finalScreen").classList.remove("so-invisible");
+        document.querySelector(".re-modal__finalScreen").classList.add("so-invisible");
+    })
 })
 
 endButton.addEventListener("click", () => {
     document.querySelector(".re-modal__quiz").classList.remove("so-invisible");
     document.querySelector(".re-modal__quiz").classList.add("so-invisible");
     document.querySelector(".re-modal__finalScreen").classList.remove("so-invisible");
-    changeDesc("Пройшов опитування", "Так");
 })
 
-const getFirstQ = document.querySelectorAll('[name="first-q-radio"]');
-const getSecondQ = document.querySelectorAll('[name="second-q-radio"]');
-const getThirdQ = document.querySelectorAll('[name="areaInput"]');
-const getFourQ = document.querySelectorAll('[name="fourth-q-radio"]');
-const getFifthQ = document.querySelectorAll('[name="fifth-q-radio"]');
-const getSixQ = document.querySelectorAll('[name="six-q-radio"]');
+$(document).ready(function() {
+    if($(window).width() < 769) {
+        $(".re-header__list").addClass("invisible");
+    }
+});
 
-const ElementArray = [getFirstQ, getSecondQ, getThirdQ, getFourQ, getFifthQ, getSixQ];
-ElementArray.forEach((e) => {
-    e.forEach((el) => {
-        el.addEventListener("change", () => {
-            changeDesc(formFiller[controlElementArray].value, el.value);
-            controlElementArray = controlElementArray + 1;
-        })
-    })
+const calculatePadding = '0 ' + (document.body.clientWidth - 1200) / 2 + 'px';
+
+$(window).scroll(function(){
+    if($(window).scrollTop() > $(".re-header").height()){
+        $(`#navigation`).css('position','fixed').css('top','0').css('z-index','88917196').css("background", "#ffffff");
+        $('#navigation').css('box-shadow','0px 6px 24px -3px rgba(34, 60, 80, 0.2)')
+        if($(window).width() < 769) {
+            $(".re-header__list").css('top','50px');
+        } else {
+            $(".re-header__link").css("color", "#222222").css("font-weight", "500");
+            $(".re-header__logo").css('padding-bottom', "15px").css("background-color", "transparent").css("color", "#fff");
+            $(".re-header__list").css('position','relative').css('top','0');
+            $('#navigation').css('left','50%').css("transform", "translateX(-50%)").css("max-width", "100%").css('padding', calculatePadding);
+            $('#navigation').css('background',"#fff url('./img/menubg.png') no-repeat");
+        }
+
+    } else {
+        $('#navigation').css('position','static').css("display", "flex").css("background", "transparent");
+        if($(window).width() < 769) {
+            $(".re-header__list").css('top','120px');
+            $('#navigation').css("background", "white");
+        } else {
+            $(".re-header__link").css("color", "#f0f0f0").css("font-weight", "400");
+            $(".re-header__logo").css('padding-bottom', "40px").css("background-color", "#f0f0f0").css("color", "#222222");
+            $(".re-header__list").css('position','inherit').css('top','auto');
+            $('#navigation').css('left','auto').css("transform", "none").css("max-width", "1200px").css("padding", "0px").css('background-image',"none");
+        }
+    }
+});
+
+const getTest = document.querySelectorAll(".re-modal__test-test");
+const getPre = document.querySelector(".pre");
+const getNex = document.querySelector(".nex");
+const endButto = document.querySelector(".en");
+let coordinaleQui = 0;
+getPre.addEventListener("click", () => {
+    if (coordinaleQui === 0) {
+        console.log("zero element, cant make")
+    } else {
+        getTest[coordinaleQui].classList.add("so-invisible");
+        coordinaleQui = coordinaleQui - 1;
+        getTest[coordinaleQui].classList.remove("so-invisible");
+        endButto.classList.add("so-invisible");
+        getNex.classList.remove("so-invisible");
+    }
+});
+
+getNex.addEventListener("click", () => {
+    if (coordinaleQuiz >= getTest.length - 1) {
+        console.log("its over, cant make");
+        coordinaleQui = getTest.length - 1;
+    } else {
+        getTest[coordinaleQui].classList.add("so-invisible");
+        coordinaleQui = coordinaleQui + 1;
+        if (coordinaleQui >= getTest.length - 1) {
+            getNex.classList.add("so-invisible");
+            endButto.classList.remove("so-invisible");
+        }
+        getTest[coordinaleQui].classList.remove("so-invisible");
+    }
+})
+
+endButto.addEventListener("click", () => {
+    document.querySelector(".re-order__tests").classList.remove("so-invisible");
+    document.querySelector(".re-order__tests").classList.add("so-invisible");
+    document.querySelector(".re-order__final").classList.remove("so-invisible");
 })

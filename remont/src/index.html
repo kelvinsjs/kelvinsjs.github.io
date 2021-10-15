@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>Ремонтні роботи</title>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
+    <title>Гільдія майстрів м. Кременчук</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/fav/favicon-16x16.png">
+    <link rel="manifest" href="./assets/fav/site.webmanifest">
+    <link rel="mask-icon" href="./assets/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/libs/slick-theme.css">
+    <link rel="stylesheet" href="./assets/libs/slick.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .re-header {
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
 <header class="re-header">
@@ -21,41 +34,39 @@
             </button>
         </div>
     </div>
-    <div class="container">
-        <nav class="re-header__nav">
-            <a href="./index.html" class="re-header__logo">
+    <nav class="re-header__nav" id="navigation">
+        <a href="./index.html" class="re-header__logo">
                 <span>
                     Гільдія
                 </span>
-                <span>
+            <span>
                     Майстрів
                 </span>
-            </a>
-            <div class="re-header__hamb">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="re-header__list invisible">
-                <li class="re-header__list-item"><a href="#" class="re-header__link">
-                    Послуги
-                </a></li>
-                <li class="re-header__list-item"><a href="#" class="re-header__link">
-                    Ціни
-                </a></li>
-                <li class="re-header__list-item"><a href="#" class="re-header__link">
-                    Наші роботи
-                </a></li>
-                <li class="re-header__list-item"><a href="#" class="re-header__link">
-                    Відгуки
-                </a></li>
-                <li class="re-header__list-item"><a href="#" class="re-header__link">
-                    Контакти
-                </a></li>
-            </ul>
-        </nav>
+        </a>
+        <div class="re-header__hamb">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="re-header__list">
+            <li class="re-header__list-item"><a href="./poslugy.html" class="re-header__link">
+                Послуги
+            </a></li>
+            <li class="re-header__list-item"><a href="./price.html" class="re-header__link">
+                Ціни
+            </a></li>
+            <li class="re-header__list-item"><a href="./our-works.html" class="re-header__link">
+                Наші роботи
+            </a></li>
+            <li class="re-header__list-item"><a href="./contacts.html" class="re-header__link">
+                Контакти
+            </a></li>
+        </ul>
+    </nav>
+    <div class="container">
+
         <div class="re-header__block">
             <div class="re-header__titles">
                 <h1 class="re-header__title">
-                    Ремонтнобудівні та оздоблювальні роботи вашого приміщення
+                    Ремонт житлових та комерційних приміщень
                 </h1>
                 <h2 class="re-header__subtitle">
                     <i class="fas fa-map-marker-alt"></i>
@@ -74,17 +85,17 @@
                 </div>
             </div>
             <div class="re-header__buttons">
-                <a href="" class="re-header__buttonLink">
+                <a href="./price.html#shtukaturka" class="re-header__buttonLink">
+                    <img src="./img/icon1.svg" alt="icon" class="re-header__buttonIcon">
                     Штукатурка
                 </a>
-                <a href="" class="re-header__buttonLink">
+                <a href="./price.html#shpak" class="re-header__buttonLink">
+                    <img src="./img/icon2.svg" alt="icon" class="re-header__buttonIcon">
                     Шпаклівка
                 </a>
-                <a href="" class="re-header__buttonLink">
-                    Фарбування
-                </a>
-                <a href="" class="re-header__buttonLink">
-                    Комплексний ремонт
+                <a href="./price.html#paint" class="re-header__buttonLink">
+                    <img src="./img/icon3.svg" alt="icon" class="re-header__buttonIcon">
+                    Комплексні роботи
                 </a>
             </div>
         </div>
@@ -93,7 +104,7 @@
 <main class="re-main">
     <section class="re-modal so-invisible">
         <div class="container">
-            <form class="re-modal__form">
+            <form action="telegram.php" class="re-modal__form" method="POST">
                 <div class="re-modal__quiz so-invisible">
                     <h3 class="re-modal__title ta-c">
                         Дайте відповідь на питання (всього 5-ть):
@@ -103,29 +114,29 @@
                             Вкажіть тип приміщення:
                         </h4>
                         <label class="re-modal__quiz-label">
-                            <input type="radio" name="first-q-radio" class="re-modal__radio so-invisible" value="Новобудова">
+
+                            <input type="radio" name="first-q-radio" class="re-modal__radio so-invisible"
+                                   value="Новобудова">
                             <span class="label-filler"></span>
-                            <p class="re-modal__label-text">Новобудова</p>
+                            <span class="re-modal__label-text">Новобудова</span>
                         </label>
                         <label class="re-modal__quiz-label">
-                            <input type="radio" name="first-q-radio" class="re-modal__radio so-invisible" value="Вторинне житло">
+                            <input type="radio" name="first-q-radio" class="re-modal__radio so-invisible"
+                                   value="Вторинне житло">
                             <span class="label-filler"></span>
-                            <p class="re-modal__label-text">Вторинне житло</p>
+                            <span class="re-modal__label-text">Вторинне житло</span>
                         </label>
                         <label class="re-modal__quiz-label">
-                            <input type="radio" name="first-q-radio" class="re-modal__radio so-invisible" value="Коттедж">
+                            <input type="radio" name="first-q-radio" class="re-modal__radio so-invisible"
+                                   value="Коттедж">
                             <span class="label-filler"></span>
-                            <p class="re-modal__label-text">Коттедж</p>
+                            <span class="re-modal__label-text">Коттедж</span>
                         </label>
                         <label class="re-modal__quiz-label">
-                            <input type="radio" name="first-q-radio" class="re-modal__radio so-invisible" value="Радянська забудова">
+                            <input type="radio" name="first-q-radio" class="re-modal__radio so-invisible"
+                                   value="Комерційна забудова">
                             <span class="label-filler"></span>
-                            <p class="re-modal__label-text">Радянська забудова</p>
-                        </label>
-                        <label class="re-modal__quiz-label">
-                            <input type="radio" name="first-q-radio" class="re-modal__radio so-invisible" value="Комерційна забудова">
-                            <span class="label-filler"></span>
-                            <p class="re-modal__label-text">Комерційна забудова</p>
+                            <span class="re-modal__label-text">Комерційна забудова</span>
                         </label>
                     </div>
                     <div class="re-modal__quiz-quiz so-invisible">
@@ -133,31 +144,35 @@
                             Вкажіть необхідний тип роботи:
                         </h4>
                         <label class="re-modal__quiz-label">
-                            <input type="radio" name="second-q-radio" class="re-modal__radio so-invisible" value="Штукатурка">
+                            <input type="radio" name="second-q-radio" class="re-modal__radio so-invisible"
+                                   value="Штукатурка">
                             <span class="label-filler"></span>
-                            <p class="re-modal__label-text">Штукатурка</p>
+                            <span class="re-modal__label-text">Штукатурка</span>
                         </label>
                         <label class="re-modal__quiz-label">
-                            <input type="radio" name="second-q-radio" class="re-modal__radio so-invisible" value="Шпаклівка">
+                            <input type="radio" name="second-q-radio" class="re-modal__radio so-invisible"
+                                   value="Шпаклівка">
                             <span class="label-filler"></span>
-                            <p class="re-modal__label-text">Шпаклівка</p>
+                            <span class="re-modal__label-text">Шпаклівка</span>
                         </label>
                         <label class="re-modal__quiz-label">
-                            <input type="radio" name="second-q-radio" class="re-modal__radio so-invisible" value="Фарбування">
+                            <input type="radio" name="second-q-radio" class="re-modal__radio so-invisible"
+                                   value="Фарбування">
                             <span class="label-filler"></span>
-                            <p class="re-modal__label-text">Фарбування</p>
+                            <span class="re-modal__label-text">Фарбування</span>
                         </label>
                         <label class="re-modal__quiz-label">
-                            <input type="radio" name="second-q-radio" class="re-modal__radio so-invisible" value="Комплексні роботи ">
+                            <input type="radio" name="second-q-radio" class="re-modal__radio so-invisible"
+                                   value="Комплексні роботи ">
                             <span class="label-filler"></span>
-                            <p class="re-modal__label-text">Комплексні роботи</p>
+                            <span class="re-modal__label-text">Комплексні роботи</span>
                         </label>
                     </div>
                     <div class="re-modal__quiz-quiz so-invisible">
                         <h4 class="re-modal__quiz-title">
                             Вкажіть площу об'єкту у м<sup>2</sup>
                         </h4>
-                        <input type="phone" id="areaInput" class="re-modal__input" name="areaInput">
+                        <input type="text" id="areaInpu" class="re-modal__input" name="areaInput">
                     </div>
                     <div class="re-modal__quiz-quiz so-invisible">
                         <h4 class="re-modal__quiz-title">
@@ -166,12 +181,12 @@
                         <label class="re-modal__quiz-label">
                             <input type="radio" name="fourth-q-radio" class="re-modal__radio so-invisible" value="Так">
                             <span class="label-filler"></span>
-                            <p class="re-modal__label-text">Так</p>
+                            <span class="re-modal__label-text">Так</span>
                         </label>
                         <label class="re-modal__quiz-label">
                             <input type="radio" name="fourth-q-radio" class="re-modal__radio so-invisible" value="Ні">
                             <span class="label-filler"></span>
-                            <p class="re-modal__label-text">Ні</p>
+                            <span class="re-modal__label-text">Ні</span>
                         </label>
                     </div>
                     <div class="re-modal__quiz-quiz so-invisible">
@@ -181,12 +196,12 @@
                         <label class="re-modal__quiz-label">
                             <input type="radio" name="fifth-q-radio" class="re-modal__radio so-invisible" value="Так">
                             <span class="label-filler"></span>
-                            <p class="re-modal__label-text">Так</p>
+                            <span class="re-modal__label-text">Так</span>
                         </label>
                         <label class="re-modal__quiz-label">
                             <input type="radio" name="fifth-q-radio" class="re-modal__radio so-invisible" value="Ні">
                             <span class="label-filler"></span>
-                            <p class="re-modal__label-text">Ні</p>
+                            <span class="re-modal__label-text">Ні</span>
                         </label>
                     </div>
                     <div class="re-modal__quiz-quiz so-invisible">
@@ -194,14 +209,16 @@
                             Оберіть знижку для вас
                         </h4>
                         <label class="re-modal__quiz-label">
-                            <input type="radio" name="six-q-radio" class="re-modal__radio so-invisible" value="3% на роботу">
+                            <input type="radio" name="six-q-radio" class="re-modal__radio so-invisible"
+                                   value="3% на роботу">
                             <span class="label-filler"></span>
-                            <p class="re-modal__label-text">3% на роботу</p>
+                            <span class="re-modal__label-text">3% на роботу</span>
                         </label>
                         <label class="re-modal__quiz-label">
-                            <input type="radio" name="six-q-radio" class="re-modal__radio so-invisible" value="5% на матеріали">
+                            <input type="radio" name="six-q-radio" class="re-modal__radio so-invisible"
+                                   value="5% на матеріали">
                             <span class="label-filler"></span>
-                            <p class="re-modal__label-text">5% на матеріали</p>
+                            <span class="re-modal__label-text">5% на матеріали</span>
                         </label>
                     </div>
                     <div class="controlButtons">
@@ -221,16 +238,16 @@
                         Вкажіть ваші контактні дані:
                     </h3>
                     <label class="re-modal__label">
-                        <p class="re-modal__label-text">
+                        <span class="re-modal__label-text">
                             Ваше ім'я:
-                        </p>
-                        <input type="text" class="re-modal__input" id="nameInput" name="inputField">
+                        </span>
+                        <input type="text" class="re-modal__input" id="nameInput" name="nameInput">
                     </label>
                     <label class="re-modal__label">
-                        <p class="re-modal__label-text">
+                        <span class="re-modal__label-text">
                             Ваш телефон:
-                        </p>
-                        <input type="phone" id="phoneInput" class="re-modal__input" name="inputField">
+                        </span>
+                        <input type="text" id="phoneInput" class="re-modal__input" name="phoneInput">
                     </label>
                     <button type="submit" class="re-modal__button">
                         <i class="fas fa-paper-plane"></i> Відправити
@@ -242,47 +259,435 @@
             </form>
         </div>
     </section>
-    <section class="re-test">
+    <section class="re-about">
         <div class="container">
             <h2 class="re-title">
-                Замовте послуги майстра-штукатура вже зараз
+                <strong>Чому</strong> наші клієнти нас рекомендують?
             </h2>
-            <form class="re-test__form">
-                <h3 class="re-test__form-title">
-                    Оберіть тип ремонтних робіт, які вам необхідні:
-                </h3>
-                <div class="re-test__form-choose">
-                    <label class="re-test__form-labelChoose">
-                        <input type="radio" class="re-test__form-radio" name="type-radio" value="Штукатурка">
-                        <span class="re-test__labelSpan">Штукатурка</span>
+            <p class="re-about__text">
+                Наша компанія займається ремонтом приміщень <b>у Кременчуці та районі</b>. Ми маємо чотири
+                основних напрямки:
+            </p>
+            <ul class="re-about__list">
+                <li class="re-about__list-item"><a href="./price.html#shtukaturka" class="re-about__list-link">
+                    Штукатурка <span class="notBold">(натисніть, щоб дізнатися більше)</span>
+                </a></li>
+                <li class="re-about__list-item"><a href="./price.html#shpak" class="re-about__list-link">
+                    Шпаклівка
+                </a></li>
+                <li class="re-about__list-item"><a href="./price.html#paint" class="re-about__list-link">
+                    Комплексні роботи та ремонт під ключ
+                </a></li>
+            </ul>
+            <p class="re-about__text">
+                Працюючи з нами, ви можете замовити як окремо взяту послугу, так і <b>комплекс послуг</b> з внутрішнього
+                оздоблення стін і стель. Замовляючи у нас комплекс, ви отримаєте ряд переваг:
+            </p>
+            <ul class="re-about__list">
+                <li class="re-about__list-item">
+                    <b>Економію часу.</b> Вам не доводиться витрачати свій час на пошук трьох різних підрядників, а
+                    також у вас є можливість замовити обробку стін і стель під ключ.
+                </li>
+                <li class="re-about__list-item">
+                    <strong>Гарантовано висока якість.</strong> Ми використовуємо сучасне обладнання та матеріали,
+                    здійснюємо контроль якості на кожному етапі оздоблювальних робіт і довіряємо роботу тільки
+                    висококваліфікованим фахівцям.
+                </li>
+                <li class="re-about__list-item">
+                    <strong>Чесність і дотримання всіх домовленостей.</strong> Ми працюємо виключно за договором в якому
+                    вказані всі обсяги виконуваних робіт, зафіксовані ціни, встановлені терміни виконання і прописані
+                    норми якості, згідно з державними будівельними нормами України.
+                </li>
+                <li class="re-about__list-item">
+                    <strong>Гарантія 2 роки на зроблену нами роботу.</strong> У нас гарантійні зобов'язання прописані в
+                    договорі, якого ми дотримуємося і дотримуємося.
+                </li>
+                <li class="re-about__list-item">
+                    <strong>Чесні ціни на матеріал.</strong> Нашим клієнтам ми надаємо знижки, які можуть досягати до
+                    10-15% від цін в роздрібних мережах. До того ж купуючи у нас матеріал, що залишився надлишки ми
+                    забираємо і повертаємо гроші.
+                </li>
+            </ul>
+            <ul class="re-about__buttons">
+                <li class="re-about__button"><img src="./img/why-ico-1.png" alt="icon" class="re-about__img">
+                    <p class="re-about__button-text">РОБОТА ПО ДОГОВОРУ</p>
+                </li>
+                <li class="re-about__button"><img src="./img/why-ico-2.png" alt="icon" class="re-about__img">
+                    <p class="re-about__button-text">ГАРАНТІЯ ДВА РОКИ</p>
+                </li>
+                <li class="re-about__button"><img src="./img/why-ico-3.png" alt="icon" class="re-about__img">
+                    <p class="re-about__button-text">ЗНИЖКИ ДЛЯ ВСІХ КЛІЄНТІВ</p>
+                </li>
+                <li class="re-about__button"><img src="./img/why-ico-4.png" alt="icon" class="re-about__img">
+                    <p class="re-about__button-text">ПОЗБАВЛЯЄМО ВІД ЗАЙВОГО МАТЕРІАЛУ</p>
+                </li>
+                <li class="re-about__button"><img src="./img/why-ico-5.png" alt="icon" class="re-about__img">
+                    <p class="re-about__button-text">ВСЕ ТУРБОТИ БЕРЕМО НА СЕБЕ</p>
+                </li>
+            </ul>
+            <button class="re-header__cost itsButton">
+                Замовте зараз та отримайте знижку
+            </button>
+        </div>
+    </section>
+    <section class="re-works">
+        <div class="container">
+            <h2 class="re-title ttu">
+                <strong>
+                    Наші роботи
+                </strong>
+            </h2>
+            <ul class="re-works__list">
+                <li class="re-works__list-item">
+                    <div class="re-works__gallery">
+                        <div>
+                            <img src="./img/2-1.jpg" alt="img slide" class="re-works__img">
+                        </div>
+                        <div><img src="./img/2-2.jpg" alt="img slide" class="re-works__img"></div>
+                        <div><img src="./img/2-3.jpg" alt="img slide" class="re-works__img"></div>
+                    </div>
+                    <div class="re-works__text">
+                        <h3 class="re-works__title">Повний ремонт салону краси</h3>
+                        <p class="re-works__subt">Виконані роботи: </p>
+                        <ul class="re-works__complete">
+                            <li class="re-works__complete-item">
+                                Укладання плитки
+                            </li>
+                            <li class="re-works__complete-item">
+                                Штукатурка
+                            </li>
+                            <li class="re-works__complete-item">
+                                Поклейка шпалер
+                            </li>
+                            <li class="re-works__complete-item">
+                                Оздоблення
+                            </li>
+                        </ul>
+                        <button class="re-header__callButton mainButton">
+                            Замовити зараз
+                        </button>
+                    </div>
+                </li>
+                <li class="re-works__list-item">
+                    <div class="re-works__gallery">
+                        <div>
+                            <img src="./img/3-1.jpg" alt="img slide" class="re-works__img">
+                        </div>
+                        <div><img src="./img/3-2.jpg" alt="img slide" class="re-works__img"></div>
+                        <div><img src="./img/3-3.jpg" alt="img slide" class="re-works__img"></div>
+                        <div><img src="./img/3-4.jpg" alt="img slide" class="re-works__img"></div>
+                    </div>
+                    <div class="re-works__text">
+                        <h3 class="re-works__title">Ремонт дитячої кімнати</h3>
+                        <p class="re-works__subt">Виконані роботи: </p>
+                        <ul class="re-works__complete">
+                            <li class="re-works__complete-item">
+                                Штукатурка
+                            </li>
+                            <li class="re-works__complete-item">
+                                Поклейка шпалер
+                            </li>
+                            <li class="re-works__complete-item">
+                                Ремонт стелі
+                            </li>
+                        </ul>
+                        <button class="re-header__callButton mainButton">
+                            Замовити зараз
+                        </button>
+                    </div>
+                </li>
+            </ul>
+            <a href="./our-works.html" class="re-works__more">
+                Більше прикладів робіт
+            </a>
+        </div>
+    </section>
+    <section class="re-order">
+        <div class="container">
+            <h2 class="re-title ttu">
+                <strong>
+                    ПРОЙДІТЬ ОПИТУВАННЯ
+                </strong>
+                І ОТРИМАЙТЕ ЗНИЖКУ
+            </h2>
+            <form action="telegram.php" class="re-order__form" method="POST">
+                <div class="re-order__tests">
+                    <div class="re-order__test">
+                        <h3 class="re-modal__title ta-c">
+                            Дайте відповідь на питання (всього 5-ть):
+                        </h3>
+                        <div class="re-modal__test-test">
+                            <h4 class="re-modal__quiz-title">
+                                Вкажіть тип приміщення:
+                            </h4>
+                            <div class="re-modal__test__q">
+                                <label class="re-modal__test-label">
+                                    <div class="re-modal__test-img"><img src="./img/item0_2.jpg" alt="img"></div>
+                                    <div class="test-choise">
+                                        <input type="radio" name="first-q-radio" class="re-modal__radio so-invisible"
+                                               value="Новобудова">
+                                        <span class="label-filler"></span>
+                                        <span class="re-modal__label-text">Новобудова</span>
+                                    </div>
+                                </label>
+                                <label class="re-modal__test-label">
+                                    <div class="re-modal__test-img"><img src="./img/item0_3.jpg" alt="img"></div>
+                                    <div class="test-choise">
+                                        <input type="radio" name="first-q-radio" class="re-modal__radio so-invisible"
+                                               value="Вторинне житло">
+                                        <span class="label-filler"></span>
+                                        <span class="re-modal__label-text">Вторинне житло</span>
+                                    </div>
+                                </label>
+                                <label class="re-modal__test-label">
+                                    <div class="re-modal__test-img"><img src="./img/item0_1.jpg" alt="img"></div>
+                                    <div class="test-choise">
+                                        <input type="radio" name="first-q-radio" class="re-modal__radio so-invisible"
+                                               value="Коттедж">
+                                        <span class="label-filler"></span>
+                                        <span class="re-modal__label-text">Коттедж</span>
+                                    </div>
+                                </label>
+                                <label class="re-modal__test-label">
+                                    <div class="re-modal__test-img"><img src="./img/item0_4.jpg" alt="img"></div>
+                                    <div class="test-choise">
+                                        <input type="radio" name="first-q-radio" class="re-modal__radio so-invisible"
+                                               value="Комерційна забудова">
+                                        <span class="label-filler"></span>
+                                        <span class="re-modal__label-text">Комерційна забудова</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="re-modal__test-test so-invisible">
+                            <h4 class="re-modal__quiz-title">
+                                Вкажіть тип роботи:
+                            </h4>
+                            <div class="re-modal__test__q">
+                                <label class="re-modal__test-label">
+                                    <div class="re-modal__test-img"><img src="./img/test1.jpg" alt="img"></div>
+                                    <div class="test-choise">
+                                        <input type="radio" name="second-q-radio" class="re-modal__radio so-invisible"
+                                               value="Штукатурка">
+                                        <span class="label-filler"></span>
+                                        <span class="re-modal__label-text">Штукатурка</span>
+                                    </div>
+                                </label>
+                                <label class="re-modal__test-label">
+                                    <div class="re-modal__test-img"><img src="./img/test2.jpg" alt="img"></div>
+                                    <div class="test-choise">
+                                        <input type="radio" name="second-q-radio" class="re-modal__radio so-invisible"
+                                               value="Шпаклівка">
+                                        <span class="label-filler"></span>
+                                        <span class="re-modal__label-text">Шпаклівка</span>
+                                    </div>
+                                </label>
+                                <label class="re-modal__test-label">
+                                    <div class="re-modal__test-img"><img src="./img/test3.jpg" alt="img"></div>
+                                    <div class="test-choise">
+                                        <input type="radio" name="second-q-radio" class="re-modal__radio so-invisible"
+                                               value="Фарбування">
+                                        <span class="label-filler"></span>
+                                        <span class="re-modal__label-text">Фарбування</span>
+                                    </div>
+                                </label>
+                                <label class="re-modal__test-label">
+                                    <div class="re-modal__test-img"><img src="./img/test4.jpg" alt="img"></div>
+                                    <div class="test-choise">
+                                        <input type="radio" name="second-q-radio" class="re-modal__radio so-invisible"
+                                               value="Комплексні роботи ">
+                                        <span class="label-filler"></span>
+                                        <span class="re-modal__label-text">Комплексні роботи</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="re-modal__test-test so-invisible"  style="max-width: 500px; margin: 0 auto;">
+                            <h4 class="re-modal__quiz-title">
+                                Вкажіть площу об'єкту у м<sup>2</sup>
+                            </h4>
+                            <input type="text" id="areaInput" class="re-modal__input" name="areaInput">
+                        </div>
+                        <div class="re-modal__test-test so-invisible">
+                            <h4 class="re-modal__quiz-title">
+                                Чи є матеріали?
+                            </h4>
+                            <div class="re-modal__test__q">
+                                <label class="re-modal__test-label">
+                                    <div class="re-modal__test-img"><img src="./img/compl1.jpg" alt="img"></div>
+                                    <div class="test-choise">
+                                        <input type="radio" name="fourth-q-radio" class="re-modal__radio so-invisible"
+                                               value="Так">
+                                        <span class="label-filler"></span>
+                                        <span class="re-modal__label-text">Так</span>
+                                    </div>
+                                </label>
+                                <label class="re-modal__test-label">
+                                    <div class="re-modal__test-img"><img src="./img/compl2.jpg" alt="img"></div>
+                                    <div class="test-choise">
+                                        <input type="radio" name="fourth-q-radio" class="re-modal__radio so-invisible"
+                                               value="Ні">
+                                        <span class="label-filler"></span>
+                                        <span class="re-modal__label-text">Ні</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="re-modal__test-test so-invisible">
+                            <h4 class="re-modal__quiz-title">
+                                Чи є електрична мережа?
+                            </h4>
+                            <div class="re-modal__test__q">
+                                <label class="re-modal__test-label">
+                                    <div class="re-modal__test-img"><img src="./img/item1_1.jpg" alt="img"></div>
+                                    <div class="test-choise">
+                                        <input type="radio" name="fifth-q-radio" class="re-modal__radio so-invisible"
+                                               value="Так">
+                                        <span class="label-filler"></span>
+                                        <span class="re-modal__label-text">Так</span>
+                                    </div>
+                                </label>
+                                <label class="re-modal__test-label">
+                                    <div class="re-modal__test-img"><img src="./img/item1_2.jpg" alt="img"></div>
+                                    <div class="test-choise">
+                                        <input type="radio" name="fifth-q-radio" class="re-modal__radio so-invisible"
+                                               value="Ні">
+                                        <span class="label-filler"></span>
+                                        <span class="re-modal__label-text">Ні</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="re-modal__test-test so-invisible">
+                            <h4 class="re-modal__quiz-title">
+                                Оберіть знижку для вас
+                            </h4>
+                            <div class="re-modal__test__q">
+                                <label class="re-modal__test-label">
+                                    <div class="re-modal__test-img"><img src="./img/gorod2.jpg" alt="img"></div>
+                                    <div class="test-choise">
+                                        <input type="radio" name="six-q-radio" class="re-modal__radio so-invisible"
+                                               value="3% на роботу">
+                                        <span class="label-filler"></span>
+                                        <span class="re-modal__label-text">3% на роботу</span>
+                                    </div>
+                                </label>
+                                <label class="re-modal__test-label">
+                                    <div class="re-modal__test-img"><img src="./img/gorod3.jpg" alt="img"></div>
+                                    <div class="test-choise">
+                                        <input type="radio" name="six-q-radio" class="re-modal__radio so-invisible"
+                                               value="5% на матеріали">
+                                        <span class="label-filler"></span>
+                                        <span class="re-modal__label-text">5% на матеріали</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="controlButtons">
+                            <p class="pre">
+                                Попередній
+                            </p>
+                            <p class="nex">
+                                Наступний
+                            </p>
+                            <p class="en so-invisible">
+                                Завершити
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="re-order__final so-invisible" style="max-width: 500px; margin: 0 auto;">
+                    <h3 class="re-modal__title">
+                        Вкажіть ваші контактні дані:
+                    </h3>
+                    <label class="re-modal__label">
+                        <span class="re-modal__label-text">
+                            Ваше ім'я:
+                        </span>
+                        <input type="text" class="re-modal__input" id="nameIn" name="nameInput">
                     </label>
-                    <label class="re-test__form-labelChoose">
-                        <input type="radio" class="re-test__form-radio" name="type-radio" value="Шпаклівка">
-                        <span class="re-test__labelSpan">Шпаклівка</span>
+                    <label class="re-modal__label">
+                        <span class="re-modal__label-text">
+                            Ваш телефон:
+                        </span>
+                        <input type="text" id="phoneIn" class="re-modal__input" name="phoneInput">
                     </label>
-                    <label class="re-test__form-labelChoose">
-                        <input type="radio" class="re-test__form-radio" name="type-radio" value="Комплексні роботи">
-                        <span class="re-test__labelSpan">Комплексні роботи</span>
-                    </label>
-                    <label class="re-test__form-labelChoose">
-                        <input type="radio" class="re-test__form-radio" name="type-radio"
-                               value="Потрібна консультація з майстром">
-                        <span class="re-test__labelSpan">Потрібна консультація з майстром</span>
-                    </label>
+                    <button type="submit" class="re-modal__button">
+                        <i class="fas fa-paper-plane"></i> Відправити
+                    </button>
                 </div>
             </form>
         </div>
     </section>
+    <section class="re-partners">
+        <div class="container">
+            <h2 class="re-title ttu"><strong>Наші партнери</strong></h2>
+            <ul class="re-partners__list">
+                <li class="re-partners__list-item">
+                    <img src="./img/logo1.jpg" alt="partner img" class="re-partners__img">
+                </li>
+                <li class="re-partners__list-item">
+                    <img src="./img/logo2.jpg" alt="partner img" class="re-partners__img">
+                </li>
+                <li class="re-partners__list-item">
+                    <img src="./img/logo3.jpg" alt="partner img" class="re-partners__img">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="re-contacts" style="padding-bottom: 20px;">
+        <div class="re-contacts__map">
+            <img src="./img/map.jpg" alt="map">
+        </div>
+        <div class="re-contacts__text">
+            <a href="viber://contact?number=%2B+380674617703" class="re-contacts__idea">
+                <i class="fab fa-viber" style="color: #ffc539;"></i> +38 (067) 461 77 03
+            </a>
+            <a href="tel:+380674617703" class="re-contacts__idea">
+                <i class="fas fa-phone-square-alt" style="color: #ffc539;"></i> +38 (067) 461 77 03
+            </a>
+            <a href="https://www.facebook.com/stroim.pod.klych/" class="re-contacts__idea">
+                <i class="fab fa-facebook-messenger" style="color: #ffc539;"></i>Гільдія майстрів
+            </a>
+            <p class="re-contacts__idea">
+                <span>Замовити дзвінок</span>
+                <button class="re-header__callButton mainButton" style="margin-left: 15px; width: auto">
+                    по цій кнопці
+                </button>
+            </p>
+        </div>
+    </section>
 </main>
-<footer>
-
+<footer class="re-footer">
+    <div class="container">
+        <h3 class="re-footer__title">"Гільдія майстрів". © 2021</h3>
+        <ul class="re-footer__list">
+            <li class="re-footer__list-item"><a href="viber://contact?number=%2B+380674617703" class="re-footer__link"
+                                                target="_blank">
+                <i class="fab fa-viber"></i>
+            </a></li>
+            <li class="re-footer__list-item"><a href="https://www.facebook.com/stroim.pod.klych/"
+                                                class="re-footer__link" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a></li>
+            <li class="re-footer__list-item"><a href="tel:+380674617703" class="re-footer__link" target="_blank">
+                <i class="fas fa-phone-square-alt"></i>
+            </a></li>
+        </ul>
+    </div>
 </footer>
 <script src="js/bundle.js"></script>
 <script async src="https://kit.fontawesome.com/c55362b8b5.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/2.2.0/jquery.inputmask.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/2.2.0/min/jquery.inputmask.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/jquery.inputmask.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/inputmask/jquery.inputmask.min.js"></script>
+<script src="assets/libs/slick.min.js"></script>
+<script>
+    $('.re-works__gallery').slick();
+</script>
 <script>
     $("#phoneInput").inputmask({"mask": "+38 (999) 999 99 99"});
+    $("#phoneIn").inputmask({"mask": "+38 (999) 999 99 99"});
 </script>
 </body>
 </html>

@@ -1,5 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tinos:ital@1&display=swap');
-$mont: 'Montserrat', sans-serif;
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../assets/fonts/ProximaNova-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url('../assets/fonts/ProximaNova-RegularIt.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../assets/fonts/ProximaNova-Semibold.woff") format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../assets/fonts/ProximaNova-Extrabld.woff") format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../assets/fonts/ProximaNova-BoldIt.woff") format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../assets/fonts/ProximaNova-Black.woff") format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+$mont: 'ProximaNova', sans-serif;
 $tinos: 'Tinos', serif;
 $grey: #222;

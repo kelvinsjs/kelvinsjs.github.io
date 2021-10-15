@@ -1,0 +1,137 @@
+.re-price {
+  padding: 60px 0;
+}
+
+.price-box-i {
+  margin-bottom: 54px;
+  font-family: $mont;
+  font-weight: 500;
+  font-size: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.price-box-i-title {
+  background-color: #fdc530;
+  text-align: center;
+  padding: 11px 0 9px 0;
+  text-transform: uppercase;
+}
+
+.price-box-i-row-top {
+  background-color: #161616;
+}
+
+.price-box-i-row div:first-child {
+  width: 100%;
+  padding-left: 60px;
+}
+
+.price-box-i-row div:nth-child(2), .price-box-i-row div:nth-child(3) {
+  min-width: 210px;
+  text-align: center;
+  border-left: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-box-i-row div {
+  padding: 11px 0 9px 0;
+}
+
+.price-box-rows-wrapper .price-box-i-row:nth-child(odd) {
+  background-color: #e3e3e3;
+  color: #161616;
+}
+
+.price-box-rows-wrapper .price-box-i-row:nth-child(even) {
+  background-color: #ededed;
+  color: #161616;
+}
+
+.price-box-i-row {
+  color: #fff;
+  display: flex;
+}
+@media (max-width: 768px) {
+  .price-box-i-row div:nth-child(2), .price-box-i-row div:nth-child(3), .price-box-i-row div:first-child {
+    min-width: auto;
+    width: 33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .price-box-i-row {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .price-box-rows-wrapper, .price-box-i-row-top {
+    font-size: 16px;
+    letter-spacing: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .price-box-i-row div:nth-child(2), .price-box-i-row div:nth-child(3), .price-box-i-row div:first-child {
+    min-width: auto;
+    width: 33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .price-box-rows-wrapper, .price-box-i-row-top {
+    font-size: 16px;
+    letter-spacing: 0px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .price-box-i-row {
+    flex-wrap: wrap;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .price-box-rows-wrapper, .price-box-i-row-top {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .price-box-i-row div:first-child {
+    width: 40%;
+  }
+}
+
+@media (max-width: 576px) {
+  .price-box-i-row div:first-child {
+    padding-left: 4px;
+  }
+}
+
+@media (max-width: 576px) {
+  .price-box-i-row div:nth-child(2), .price-box-i-row div:nth-child(3) {
+    width: 30%;
+  }
+}
+
+@media (max-width: 576px) {
+  .price-box-i-row .work-unit, .price-box-i-row .work-price {
+    padding: 11px 4px 9px 4px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .price-box-rows-wrapper, .price-box-i-row-top {
+    font-size: 12px;
+  }
+
+}
