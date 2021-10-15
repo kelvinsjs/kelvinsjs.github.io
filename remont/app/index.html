@@ -5,8 +5,7 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Ремонтні роботи</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -93,7 +92,7 @@
 <main class="re-main">
     <section class="re-modal so-invisible">
         <div class="container">
-            <form class="re-modal__form">
+            <form action="telegram.php" class="re-modal__form" method="POST" autocomplete="off" enctype="multipart/form-data">
                 <div class="re-modal__quiz so-invisible">
                     <h3 class="re-modal__title ta-c">
                         Дайте відповідь на питання (всього 5-ть):
@@ -224,13 +223,13 @@
                         <p class="re-modal__label-text">
                             Ваше ім'я:
                         </p>
-                        <input type="text" class="re-modal__input" id="nameInput" name="inputField">
+                        <input type="text" class="re-modal__input" id="nameInput" name="nameInput">
                     </label>
                     <label class="re-modal__label">
                         <p class="re-modal__label-text">
                             Ваш телефон:
                         </p>
-                        <input type="phone" id="phoneInput" class="re-modal__input" name="inputField">
+                        <input type="text" id="phoneInput" class="re-modal__input" name="phoneInput">
                     </label>
                     <button type="submit" class="re-modal__button">
                         <i class="fas fa-paper-plane"></i> Відправити

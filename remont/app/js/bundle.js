@@ -57,7 +57,6 @@ function finalTextGenerate() {
     formFiller.forEach(function (e) {
       finalText = finalText + e.value + ": " + e.desc + "\n";
     });
-    console.log(finalText);
   }
 }
 
@@ -92,15 +91,15 @@ var closeFormButton = document.querySelector(".close-form");
 closeFormButton.addEventListener("click", closeModal);
 var getFormSubmitButton = document.querySelector(".re-modal__form");
 var a = document.querySelectorAll('[name="inputField"]');
-getFormSubmitButton.addEventListener("submit", function (e) {
-  e.preventDefault();
+// getFormSubmitButton.addEventListener("submit", function (e) {
+//   e.preventDefault();
 
-  for (var i = 0; i < a.length; i++) {
-    changeDesc(formFiller[i].value, a[i].value);
-  }
+//   for (var i = 0; i < a.length; i++) {
+//     changeDesc(formFiller[i].value, a[i].value);
+//   }
 
-  finalTextGenerate();
-});
+//   finalTextGenerate();
+// });
 var controlElementArray = 2;
 var getQuiz = document.querySelectorAll(".re-modal__quiz-quiz");
 var getPrev = document.querySelector(".prev");
@@ -162,6 +161,29 @@ ElementArray.forEach(function (e) {
     });
   });
 });
+
+// $(document).on('submit', '.re-modal__form', function(e){
+// e.preventDefault();
+//   for (let i = 0; i < a.length; i++) {
+//     changeDesc(formFiller[i].value, a[i].value);
+//   }
+
+//   finalTextGenerate();
+//   $.ajax({
+//     url: '../telegram.php',
+//     type: 'POST',
+//     data: finalText,
+//     processData: false,
+//     contentType: false,
+//     success: function(data){
+//      console.log("success!")
+//    },
+//     error: function(){
+//   console.log('ERROR');
+//     }
+//  })
+// })
+
 
 },{}]},{},[1])
 
