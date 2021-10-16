@@ -1,6 +1,77 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
+<<<<<<< HEAD
+var formFiller = [{
+  value: "Ім'я",
+  desc: ""
+}, {
+  value: "Телефон",
+  desc: ""
+}, {
+  value: "Тип об'єкту",
+  desc: ""
+}, {
+  value: "Тип роботи",
+  desc: ""
+}, {
+  value: "Площа",
+  desc: ""
+}, {
+  value: "Чи є матеріал",
+  desc: ""
+}, {
+  value: "Чи є електрика",
+  desc: ""
+}, {
+  value: "Знижка",
+  desc: ""
+}, {
+  value: "Пройшов опитування",
+  desc: "Ні"
+}];
+
+function changeDesc(value, desc) {
+  for (var i in formFiller) {
+    if (formFiller[i].value == value) {
+      formFiller[i].desc = desc;
+      break;
+    }
+  }
+}
+
+var finalText = "";
+
+function finalTextGenerate() {
+  finalText = "";
+
+  if (formFiller[formFiller.length * 1 - 1].desc === "Ні") {
+    finalText = finalText + "Клієнт замовив зворотний дзвінок. \n";
+
+    for (var i = 0; i < 2; i++) {
+      finalText = finalText + formFiller[i].value + ": " + formFiller[i].desc + "\n";
+    }
+
+    console.log(finalText);
+  } else {
+    finalText = finalText + "Клієнт пройшов опитування \n";
+    formFiller.forEach(function (e) {
+      finalText = finalText + e.value + ": " + e.desc + "\n";
+    });
+  }
+}
+
+var typeRadio = document.querySelectorAll('[name="type-radio"]');
+typeRadio.forEach(function (e) {
+  e.addEventListener("change", function () {
+    changeDesc("Тип роботи", e.value);
+    console.log(formFiller);
+  });
+});
+var form = document.querySelector(".re-test__form");
+form.addEventListener("submit", function (e) {});
+=======
+>>>>>>> 0c97bbc0378f946b88081ee1bbe166cf6dc92bc6
 var hambButton = document.querySelector(".re-header__hamb");
 hambButton.addEventListener("click", function (e) {
   e.preventDefault();
@@ -24,6 +95,19 @@ callButton.forEach(function (e) {
 var closeFormButton = document.querySelector(".close-form");
 closeFormButton.addEventListener("click", closeModal);
 var a = document.querySelectorAll('[name="inputField"]');
+<<<<<<< HEAD
+// getFormSubmitButton.addEventListener("submit", function (e) {
+//   e.preventDefault();
+
+//   for (var i = 0; i < a.length; i++) {
+//     changeDesc(formFiller[i].value, a[i].value);
+//   }
+
+//   finalTextGenerate();
+// });
+var controlElementArray = 2;
+=======
+>>>>>>> 0c97bbc0378f946b88081ee1bbe166cf6dc92bc6
 var getQuiz = document.querySelectorAll(".re-modal__quiz-quiz");
 var getPrev = document.querySelector(".prev");
 var getNext = document.querySelector(".next");
@@ -140,6 +224,29 @@ endButto.addEventListener("click", function () {
   document.querySelector(".re-order__tests").classList.add("so-invisible");
   document.querySelector(".re-order__final").classList.remove("so-invisible");
 });
+
+// $(document).on('submit', '.re-modal__form', function(e){
+// e.preventDefault();
+//   for (let i = 0; i < a.length; i++) {
+//     changeDesc(formFiller[i].value, a[i].value);
+//   }
+
+//   finalTextGenerate();
+//   $.ajax({
+//     url: '../telegram.php',
+//     type: 'POST',
+//     data: finalText,
+//     processData: false,
+//     contentType: false,
+//     success: function(data){
+//      console.log("success!")
+//    },
+//     error: function(){
+//   console.log('ERROR');
+//     }
+//  })
+// })
+
 
 },{}]},{},[1])
 
