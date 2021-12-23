@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Итоги 2021 года Каражан</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./animate.css">
+	<script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+	<script src="https://unpkg.com/pageable@latest/dist/pageable.min.css"></script>
+	<script src="./wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="main-box">
+		<div data-anchor="page-1">
+			<marquee class="marquee__inner">
+				TheCandleSword&nbsp;&nbsp;&nbsp;Новогодний Монстр&nbsp;&nbsp;&nbsp;TheTimesword&nbsp;&nbsp;&nbsp;Новогодний Кельвин&nbsp;&nbsp;&nbsp;Лис Микитка&nbsp;&nbsp;&nbsp;Лифт&nbsp;&nbsp;&nbsp;Новогодний Рут&nbsp;&nbsp;&nbsp;TheRainSword&nbsp;&nbsp;&nbsp;Актерио Соляридзе&nbsp;&nbsp;&nbsp;Капитан Змей Токи фон Эстерлайн&nbsp;&nbsp;&nbsp;тварь&nbsp;&nbsp;&nbsp;Kostyaavd&nbsp;&nbsp;&nbsp;satanisi&nbsp;&nbsp;&nbsp;Drendon&nbsp;&nbsp;&nbsp;Ghost&nbsp;&nbsp;&nbsp;Murglowence&nbsp;&nbsp;&nbsp;TheTiltingSword&nbsp;&nbsp;&nbsp;Виктор Корнеплодус&nbsp;&nbsp;&nbsp;Дурной Птах&nbsp;&nbsp;&nbsp;Молодой Человек&nbsp;&nbsp;&nbsp;Мясной Душнильчик&nbsp;&nbsp;&nbsp;Новогодний еньчик (жду рута Х/9)&nbsp;&nbsp;&nbsp;Сосочек(Kratan)
+			</marquee>
+			<h1 class="st-title">
+				Каражан
+			</h1>
+			<h2 class="st-subtitle">
+				Итоги 2021 года
+			</h2>
+		</div>
+		<div data-anchor="page-2">
+			<div class="container">
+				<h2 class="wr-title">
+					Початимся?
+				</h2>
+				<p class="wr-text">
+					За этот год было написано <b>более <span class="counter">0</span> сообщений</b>
+				</p>
+				<div class="wr-box">
+					<div class="wr-box-small">
+						<div class="wr-box__title">
+							Самый продуктивный месяц:
+						</div>
+						<div class="wr-box__left">
+							<p class="wr-box__text">
+								Январь - <b>80 799</b> сообщений
+							</p>
+							<p class="wr-box__text">
+								Май - <b>46 167</b> сообщений
+							</p>
+							<p class="wr-box__text">
+								Август - <b>45 498</b> сообщений
+							</p>
+						</div>
+					</div>
+					<div class="wr-box-small">
+						<div class="wr-box__title">
+							Главные писатели:
+						</div>
+						<div class="wr-box__right">
+							<p class="wr-box__text">
+								<img src="./img/zero.png" alt="sveca" class="wr-box__image">
+								<span class="d-b">
+									Zero  Z#5019
+								</span>
+								<b>
+									36903
+								</b>
+							</p>
+							<p class="wr-box__text">
+								<img src="./img/sveca.png" alt="sveca" class="wr-box__image">
+								<span class="d-b">
+									Chandelure#5127
+								</span>
+								<b>
+									51 939 сообщений
+								</b>
+							</p>
+							<p class="wr-box__text">
+								<img src="./img/tanker.png" alt="sveca" class="wr-box__image">
+								<span class="d-b">
+									Tanker_Klash#3555
+								</span>
+								<b>
+									25972
+								</b>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-anchor="page-3" style="background: purple;"></div>
+		<div data-anchor="page-4" style="background: blue;"></div>
+	</div>
+	<script type="text/javascript">
+		const pageable = new Pageable(".main-box", {
+			animation: 700,
+		});
+		document.querySelector(".st-subtitle").addEventListener('click', () => {
+			pageable.next();
+		})
+	</script>
+	<script src="app.js"></script>
+</body>
+</html>
