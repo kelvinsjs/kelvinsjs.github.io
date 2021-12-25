@@ -215,3 +215,290 @@ a:active {
   width: 100%;
   max-width: 380px;
 }
+
+[data-anchor="page-3"] {
+  background-color: #ffccd1;
+  color: #ec1e32;
+  padding: 30px 0;
+  overflow: hidden;
+}
+
+.smile-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+
+.img-kekv-box {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.kekv {
+  width: 100px;
+  height: 100px;
+  animation: opacityBox 0.9s ease;
+  transform: scale(0);
+}
+
+.smile-line {
+  height: 100px;
+  margin: auto 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.d-n {
+  display: none !important;
+}
+
+@keyframes opacityBox {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.page3box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.em-text {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+.em-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.em-smallbox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 380px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.em-smallbox .wr-box__text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 23px;
+}
+
+.em-smallbox .wr-box__text .wr-box__image {
+  margin-right: 10px;
+}
+
+.em-smallbox .wr-box__text b {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.em-smallbox .wr-box__text .wr-box__image:nth-child(2) {
+  margin-right: 10px;
+  width: 30px;
+}
+
+[data-anchor="page-4"] {
+  background-color: #8d1832;
+  color: #ffc965;
+  padding: 20px 0;
+}
+
+
+.porcha {
+  color: #016450;
+  position: relative;
+}
+
+.rel {
+  position: relative;
+  z-index: 1323;
+}
+
+.porcha:after {
+  content: "";
+  background: url("./img/NicePng_tentacles-png_912466.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 70px;
+  height: 85px;
+  top: 0;
+  z-index: 122;
+  transform: translate(-31px, -35px);
+}
+
+[data-anchor="page-5"] {
+  padding: 30px 0;
+  background: rgb(250,250,250);
+  background: linear-gradient(180deg, rgba(250,250,250,1) 0%, rgba(115,143,190,1) 100%);
+  color: #181415;
+}
+
+[alt="ping"] {
+  height: 80px;
+  margin: 0 10px;
+}
+
+[data-anchor="page-5"] .wr-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-anchor="page-6"] {
+  padding: 30px 0;
+  background: #a0bf8e;
+  color: #483c5c;
+  overflow: hidden;
+  position: relative;
+}
+
+.hide-block {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(17px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 2999;
+}
+
+.hide-text {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hide-buttons {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:  40px;
+}
+
+.hide-b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 225px;
+  height: 100%;
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+}
+
+.hide-no-ok {
+  background-color: red;
+  color: black;
+}
+
+.hide-ok {
+  background-color: blue;
+  color: white;
+}
+
+
+.a18block {
+  padding: 30px 0;
+  position: relative;
+  z-index: 23;
+}
+
+.disc-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.linkToDiscord {
+  background: #414675;
+  color: #dee0fc;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.no-mar {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+[data-anchor="page-7"] {
+  padding: 30px 0;
+  background: #203264;
+  color: #fafeff;
+  position: relative;
+}
+
+[data-anchor="page-7"] .no-mar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.happy {
+  color: red;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+.afterword {
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+  width: 100%;
+  transform: translateY(-10px);
+}
+
+.cookies {
+  text-decoration: underline !important; 
+  color: white;
+  display: block;
+  margin-top: 5px;
+}
