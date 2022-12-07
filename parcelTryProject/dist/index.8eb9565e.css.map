@@ -1,0 +1,1 @@
+{"mappings":"ACEA;;;;ADAA","sources":["Documents/kelvinsjs.github.io/parcelTryProject/src/style/style.scss","Documents/kelvinsjs.github.io/parcelTryProject/src/style/_vars.scss"],"sourcesContent":["@import 'vars';\r\n\r\nh1 {\r\n    color: $red;\r\n}",null],"names":[],"version":3,"file":"index.8eb9565e.css.map","sourceRoot":"/__parcel_source_root/"}
